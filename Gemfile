@@ -36,3 +36,4 @@ gem 'jbuilder', '~> 1.0.1'
 
 # To use debugger
 # gem 'debugger'
+ruby "2.0.0"
