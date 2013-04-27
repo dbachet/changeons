@@ -8,6 +8,8 @@ gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
 
 gem 'slim'
 
+gem 'bootstrap-sass', '~> 2.3.1.1'
+
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
 end

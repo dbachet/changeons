@@ -1,29 +1,23 @@
-<h1>Listing links</h1>
+h1 Listing links
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Url</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+table
+  thead
+    tr
+      th Name
+      thUrl
+      th
+      th
+      th
 
-  <tbody>
-    <% @links.each do |link| %>
-    <tr>
-      <td><%= link.name %></td>
-      <td><%= link.url %></td>
-      <td><%= link_to 'Show', link %></td>
-      <td><%= link_to 'Edit', edit_link_path(link) %></td>
-      <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
+  tbody
+    - @links.each do |link|
+      tr
+        td = link.name
+        td = link.url
+        td = link_to 'Show', link
+        td = link_to 'Edit', edit_link_path(link)
+        td = link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }
 
-<br />
+br
 
-<%= link_to 'New Link', new_link_path %>
+= link_to 'New Link', new_link_path

@@ -21,5 +21,8 @@ module Changeons
 
     # Force the application to not access the DB or load models when precompiling your assets
     config.assets.initialize_on_precompile = false
+
+    # From the bootstrap-saas gem
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
