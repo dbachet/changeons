@@ -6,6 +6,8 @@ gem 'rails', '4.0.0.beta1'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
 
+gem 'simple_form'
+
 gem 'slim'
 
 gem 'bootstrap-sass', '~> 2.3.1.1'
