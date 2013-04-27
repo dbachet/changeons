@@ -8,6 +8,10 @@ gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
 
 gem 'slim'
 
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
