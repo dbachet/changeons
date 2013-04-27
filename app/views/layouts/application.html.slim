@@ -7,7 +7,6 @@ head
   = csrf_meta_tags
 
 body
-  p.notice = notice
-  p.alert = alert
   = nav_bar brand: "Changeons", brand_link: links_path, responsive: true
+  = render partial: "shared/flash_messages", flash: flash
   = yield
