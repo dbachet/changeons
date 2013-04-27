@@ -11,6 +11,7 @@ gem 'simple_form'
 gem 'slim'
 
 gem 'bootstrap-sass', '~> 2.3.1.1'
+gem 'rails_bootstrap_navbar'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
