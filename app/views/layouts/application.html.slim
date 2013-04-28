@@ -1,11 +1,16 @@
 doctype html
 head
   title Changeons
-  = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-  = javascript_include_tag "application", "data-turbolinks-track" => true
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 
 body
-  = nav_bar brand: "Changeons", brand_link: links_path, responsive: true
-  = render partial: "shared/flash_messages", flash: flash
+  = nav_bar brand: 'Changeons', brand_link: links_path, responsive: true do
+    = menu_group pull: :right do
+      - if current_user
+        = menu_item 'Logout', destroy_user_session_path, method: :delete
+      - else
+        = menu_item 'Login', new_user_session_path
+  = render partial: 'shared/flash_messages', flash: flash
   = yield
