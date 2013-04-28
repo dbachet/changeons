@@ -20,6 +20,8 @@ module Changeons
     # config.i18n.default_locale = :de
 
     # Force the application to not access the DB or load models when precompiling your assets
+    # Heroku needs this attribute to be false
+    # http://guides.rubyonrails.org/asset_pipeline.html#precompiling-assets
     config.assets.initialize_on_precompile = false
 
     # From the bootstrap-saas gem
