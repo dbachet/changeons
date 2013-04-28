@@ -46,7 +46,7 @@ group :test do
   gem 'capybara'
 end
 
-group :production do
+group :staging, :production do
   gem 'pg', '0.14.1'
 end
 
