@@ -1,4 +1,5 @@
 class LinksController < ApplicationController
+  load_and_authorize_resource
   before_action :set_link, only: [:show, :edit, :update, :destroy]
 
   # GET /links
