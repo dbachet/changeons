@@ -8,6 +8,7 @@ gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
 
 gem 'simple_form'
 gem 'cancan'
+gem 'rolify'
 gem 'slim'
 
 gem 'bootstrap-sass', '~> 2.3.1.1'
