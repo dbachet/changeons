@@ -48,6 +48,7 @@ end
 group :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'capybara'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 group :staging, :production do
