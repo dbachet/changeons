@@ -1,7 +1,7 @@
 class LinksController < ApplicationController
   before_filter :authenticate_user!, except: [:show, :index]
-  load_and_authorize_resource
   before_action :set_link, only: [:show, :edit, :update, :destroy]
+  authorize_resource
 
   # GET /links
   # GET /links.json
