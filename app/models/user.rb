@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
     @admin ||= has_role?(:admin)
   end
 
-  def admin?
+  def member?
     @member ||= has_role?(:member)
   end
 end
