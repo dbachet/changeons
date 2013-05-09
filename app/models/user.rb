@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  after_create :add_default_role
+  before_save :add_default_role, if: 'role_ids.empty?'
 
   ROLES = %w(member admin)
 
@@ -20,8 +20,6 @@ class User < ActiveRecord::Base
   private
 
     def add_default_role
-      if role_ids.empty?
-        add_role(ROLES.first)
-      end
+      add_role(ROLES.first)
     end
 end
