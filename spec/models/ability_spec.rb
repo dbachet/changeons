@@ -15,7 +15,7 @@ describe 'User' do
     end
 
     context 'when is an member' do
-      let(:user){ create :user, :member }
+      let(:user){ create :user }
 
       it{ should_not be_able_to(:index, User.new) }
       it{ should_not be_able_to(:new, User.new) }
