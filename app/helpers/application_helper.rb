@@ -13,4 +13,12 @@ module ApplicationHelper
         flash_type.to_s
     end
   end
+
+  def profile_link_content
+    %Q{Profile <i class='icon-wrench'></i>}.html_safe
+  end
+
+  def logout_link_content
+    %Q{Logout <i class='icon-off'></i>}.html_safe
+  end
 end

@@ -1,0 +1,12 @@
+= nav_bar brand: 'Changeons', brand_link: links_path, responsive: true do
+  = menu_group do
+    - if can? :index, User
+      = menu_item 'Users', users_path
+  = menu_group pull: :right do
+    - if current_user
+      = drop_down current_user.email do
+        = menu_item profile_link_content, edit_user_registration_path
+        = drop_down_divider
+        = menu_item logout_link_content, destroy_user_session_path, method: :delete
+    - else
+      = menu_item 'Login', new_user_session_path
