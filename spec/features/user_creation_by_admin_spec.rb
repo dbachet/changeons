@@ -6,9 +6,10 @@ feature 'User creation by admin' do
   scenario "Signing up without role" do
     visit new_user_path
     within("#new_user") do
-      fill_in 'Email', :with => 'test@example.com'
-      fill_in 'Password', :with => 'testtest'
-      fill_in 'Password confirmation', :with => 'testtest'
+      fill_in 'Email', with: 'test@example.com'
+      fill_in 'Name', with: 'Mr Test'
+      fill_in 'Password', with: 'testtest'
+      fill_in 'Password confirmation', with: 'testtest'
     end
     click_button 'Create User'
     find('.alert-info').should have_content 'User was successfully created.'
@@ -18,9 +19,10 @@ feature 'User creation by admin' do
   scenario "Signing up with admin role" do
     visit new_user_path
     within("#new_user") do
-      fill_in 'Email', :with => 'test@example.com'
-      fill_in 'Password', :with => 'testtest'
-      fill_in 'Password confirmation', :with => 'testtest'
+      fill_in 'Email', with: 'test@example.com'
+      fill_in 'Name', with: 'Mr Test'
+      fill_in 'Password', with: 'testtest'
+      fill_in 'Password confirmation', with: 'testtest'
     end
     check 'admin'
     click_button 'Create User'

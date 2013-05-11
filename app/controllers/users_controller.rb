@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, {role_ids: []}, :password, :password_confirmation)
+    params.require(:user).permit(:email, :name, {role_ids: []}, :password, :password_confirmation)
   end
 
   def user_params_for_update

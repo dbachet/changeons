@@ -10,6 +10,7 @@
           li = msg
 
   = f.input :email, disabled: (@user.persisted? ? true : false)
+  = f.input :name, disabled: (@user.persisted? ? true : false)
   = f.association :roles, as: :check_boxes
   - unless @user.persisted?
     = f.input :password
