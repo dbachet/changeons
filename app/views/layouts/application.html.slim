@@ -7,6 +7,9 @@ head
 
 body
   = nav_bar brand: 'Changeons', brand_link: links_path, responsive: true do
+    = menu_group do
+      - if can? :index, User
+        = menu_item 'Users', users_path
     = menu_group pull: :right do
       - if current_user
         = menu_item 'Logout', destroy_user_session_path, method: :delete
