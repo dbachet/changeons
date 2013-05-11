@@ -2,4 +2,8 @@ FactoryGirl.define do
   sequence :email do |n|
     "test_#{n}_#{rand(10000 * n)}@example.com"
   end
+
+  sequence :name do |n|
+    "name #{rand(10000 * n)}"
+  end
 end
