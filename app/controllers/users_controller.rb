@@ -24,13 +24,13 @@ class UsersController < ApplicationController
     end
   end
 
-  # def create
-  #   if @user.update(user_params)
-  #     redirect_to users_path, notice: 'User was successfully updated!'
-  #   else
-  #     render :edit
-  #   end
-  # end
+  def update
+    if @user.update(user_params_for_update)
+      redirect_to users_path, notice: 'User was successfully updated.'
+    else
+      render :edit
+    end
+  end
 
   private
 
@@ -40,5 +40,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, {role_ids: []}, :password, :password_confirmation)
+  end
+
+  def user_params_for_update
+    params.require(:user).permit({role_ids: []})
   end
 end

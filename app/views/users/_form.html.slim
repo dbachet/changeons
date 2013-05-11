@@ -9,8 +9,9 @@
         - @user.errors.full_messages.each do |msg|
           li = msg
 
-  = f.input :email
+  = f.input :email, disabled: (@user.persisted? ? true : false)
   = f.association :roles, as: :check_boxes
-  = f.input :password
-  = f.input :password_confirmation
+  - unless @user.persisted?
+    = f.input :password
+    = f.input :password_confirmation
   = f.button :submit
