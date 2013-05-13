@@ -1,0 +1,26 @@
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  background-color: #40475a;
+  background-image: url('/assets/transparent-background.png');
+}
+
+.navbar .container {
+  max-width: 940px;
+}
+
+.navbar-inner { @include rounded(0) }
+
+.container.frame {
+  background: rgba(255,255,255,0.1);
+  padding: 7px;
+  @include rounded(4px);
+}
+
+.span12.main {
+  background-color: white;
+}

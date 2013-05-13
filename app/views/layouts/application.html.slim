@@ -8,7 +8,10 @@ head
 body
   = render 'nav'
   .container
-    .row
+    .row-fluid
       .span12
         = render partial: 'flash_messages', flash: flash
-        = yield
+  .container.frame
+      .row-fluid
+        .span12.main
+          = yield

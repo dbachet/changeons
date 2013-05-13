@@ -1,23 +1,18 @@
-h1 Listing links
-
-table
-  thead
-    tr
-      th Name
-      th Url
-      th
-      th
-      th
-
-  tbody
+.content
+  .intro
+    b Recensons les informations pour y voir plus claire.
+    = ' '
+    small Et changeons.
+  - if can? :manage, Link
+    = link_to 'New Link', new_link_path
+  ul#links
     - @links.each do |link|
-      tr
-        td = link.name
-        td = link.url
-        td = link_to 'Show', link
-        td = link_to 'Edit', edit_link_path(link)
-        td = link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }
-
-br
-
-= link_to 'New Link', new_link_path
+      li
+        h2= link_to link.name, link.url
+        span.shared-by= "Partagé par #{link.user.name} il y a #{distance_of_time_in_words_to_now(link.created_at)}"
+        - if can? :manage, link
+          .admin
+          = link_to 'Éditer', edit_link_path(link)
+          = " - "
+          = link_to 'Supprimer', link, method: :delete, data: { confirm: 'Are you sure?' }
+        hr
