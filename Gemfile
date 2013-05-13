@@ -10,6 +10,7 @@ gem 'simple_form'
 gem 'cancan'
 gem 'rolify'
 gem 'slim'
+gem 'rails-i18n'
 
 gem 'bootstrap-sass', '~> 2.3.1.1'
 gem 'rails_bootstrap_navbar'
