@@ -1,8 +1,8 @@
+.intro
+  b Recensons ensemble l'information pour y voir plus claire.
+  = ' '
+  small Et changeons.
 .content
-  .intro
-    b Recensons ensemble l'information pour y voir plus claire.
-    = ' '
-    small Et changeons.
   - if can? :manage, Link
     = link_to 'New Link', new_link_path
   ul#links
