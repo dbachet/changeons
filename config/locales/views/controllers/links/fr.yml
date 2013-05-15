@@ -1,0 +1,6 @@
+fr:
+  links:
+    create:
+      success: Le lien a été créé avec succès.
+    update:
+      success: Le lien a été mis à jour avec succès.

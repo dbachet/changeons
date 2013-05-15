@@ -1,0 +1,6 @@
+fr:
+  users:
+    create:
+      success: L'utilisateur a été créé avec succès.
+    update:
+      success: L'utilisateur a été mis à jour avec succès.
