@@ -9,8 +9,8 @@ feature 'User edition by admin' do
     within("#edit_user_#{admin.id}") do
       uncheck 'admin'
     end
-    click_button 'Update User'
-    find('.alert-info').should have_content 'User was successfully updated.'
+    click_button 'Enregistrer l\'utilisateur'
+    find('.alert-info').should have_content 'L\'utilisateur a été mis à jour avec succès.'
     User.last.roles_name.should eql ['member']
   end
 end

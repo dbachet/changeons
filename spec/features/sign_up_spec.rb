@@ -8,8 +8,8 @@ feature 'Signing up' do
     find('#user_name').set('Thomas Magnum')
     find('#user_password').set('testtest')
     find('#user_password_confirmation').set('testtest')
-    click_button 'Sign up'
-    page.should have_content 'You have signed up successfully'
+    click_button 'Créer le compte'
+    page.should have_content 'Vous vous êtes enregistré(e) avec succès'
     User.last.name.should eql 'Thomas Magnum'
   end
 end

@@ -5,7 +5,7 @@ feature 'User buttons' do
   scenario 'Should have a login link when user is not logged in' do
     visit root_path
 
-    click_link('Login')
+    click_link('Se connecter')
     current_path.should == new_user_session_path
   end
 
@@ -14,7 +14,7 @@ feature 'User buttons' do
     sign_in
     visit root_path
 
-    click_link('Logout')
+    click_link('Se déconnecter')
     current_path.should == root_path
   end
 
@@ -22,7 +22,7 @@ feature 'User buttons' do
     sign_in
     visit root_path
 
-    click_link('Profile')
+    click_link('Mon profil')
     current_path.should == edit_user_registration_path
   end
 end

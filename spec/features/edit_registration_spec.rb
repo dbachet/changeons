@@ -12,8 +12,8 @@ feature 'Edit profile' do
     find('#user_password').set('humhumhum')
     find('#user_password_confirmation').set('humhumhum')
     find('#user_current_password').set('testtest')
-    click_button 'Update'
-    page.should have_content 'You updated your account successfully'
+    click_button 'Mettre à jour l\'utilisateur'
+    page.should have_content 'Votre compte a été modifié avec succès.'
     User.last.email.should eql 'user@test.com'
     User.last.name.should eql 'Gilberto Magnum'
   end

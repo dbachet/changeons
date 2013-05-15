@@ -59,7 +59,7 @@ fr:
       updated: Votre compte a été modifié avec succès.
       new:
         create_account: Créer un compte
-        submit: Ajouter l'utilisateur
+        submit: Créer le compte
       edit:
         edit_user: Édition d'un utilisateur
         waiting_confirmation: Actuellement en attente de la confirmation par email.

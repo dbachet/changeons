@@ -6,7 +6,7 @@ feature 'Admin specific links' do
   scenario "Have a link to user index" do
     visit root_path
 
-    click_link 'Users'
+    click_link 'Utilisateurs'
     current_path.should == users_path
   end
 end

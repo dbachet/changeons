@@ -7,12 +7,12 @@ feature 'User creation by admin' do
     visit new_user_path
     within("#new_user") do
       fill_in 'Email', with: 'test@example.com'
-      fill_in 'Name', with: 'Mr Test'
-      fill_in 'Password', with: 'testtest'
-      fill_in 'Password confirmation', with: 'testtest'
+      fill_in 'Nom', with: 'Mr Test'
+      fill_in 'Mot de passe', with: 'testtest'
+      fill_in 'Confirmation du mot de passe', with: 'testtest'
     end
-    click_button 'Create User'
-    find('.alert-info').should have_content 'User was successfully created.'
+    click_button 'Enregistrer l\'utilisateur'
+    find('.alert-info').should have_content 'L\'utilisateur a été créé avec succès.'
     User.last.roles_name.should eql ['member']
   end
 
@@ -20,13 +20,13 @@ feature 'User creation by admin' do
     visit new_user_path
     within("#new_user") do
       fill_in 'Email', with: 'test@example.com'
-      fill_in 'Name', with: 'Mr Test'
-      fill_in 'Password', with: 'testtest'
-      fill_in 'Password confirmation', with: 'testtest'
+      fill_in 'Nom', with: 'Mr Test'
+      fill_in 'Mot de passe', with: 'testtest'
+      fill_in 'Confirmation du mot de passe', with: 'testtest'
     end
     check 'admin'
-    click_button 'Create User'
-    find('.alert-info').should have_content 'User was successfully created.'
+    click_button 'Enregistrer l\'utilisateur'
+    find('.alert-info').should have_content 'L\'utilisateur a été créé avec succès.'
     User.last.roles_name.should eql ['admin']
   end
 end

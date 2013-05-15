@@ -6,11 +6,11 @@ feature 'Link creation' do
   scenario "Create a new link" do
     visit new_link_path
     within("#new_link") do
-      fill_in 'Name', :with => 'That link deals with...'
-      fill_in 'Url', :with => 'http://some-url.com'
+      fill_in 'Description', :with => 'That link deals with...'
+      fill_in 'URL', :with => 'http://some-url.com'
     end
-    click_button 'Create Link'
-    find('.alert-info').should have_content 'Link was successfully created.'
+    click_button 'Enregistrer le lien'
+    find('.alert-info').should have_content 'Le lien a été créé avec succès.'
     Link.last.user_id.should eql 1
   end
 end
