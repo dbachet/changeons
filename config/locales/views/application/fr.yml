@@ -1,0 +1,7 @@
+fr:
+  application:
+    nav:
+      users: Utilisateurs
+      profile: Mon profil
+      sign_out: Se déconnecter
+      sign_in: Se connecter
