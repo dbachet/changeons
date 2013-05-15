@@ -1,6 +1,6 @@
 .content
-  h1 New user
+  h1= t('.new_user')
 
   = render 'form'
 
-  = link_to 'Back', users_path
+  = link_to t('.back'), users_path

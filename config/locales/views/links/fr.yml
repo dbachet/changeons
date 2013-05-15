@@ -23,6 +23,5 @@ fr:
     form:
       submit: Enregistrer le lien
       error:
-        one: "%{count} erreur"
-        other: "%{count} erreurs"
-      avoid_saving: a empêché le lien d'être enregistré
+        one: "%{count} erreur a empêché le lien d'être enregistré"
+        other: "%{count} erreurs ont empêché le lien d'être enregistré"

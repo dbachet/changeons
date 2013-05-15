@@ -1,0 +1,21 @@
+fr:
+  users:
+    new:
+      new_user: Nouvel utilisateur
+      back: Retour
+    edit:
+      edit_user: Édition de l'utilisateur
+      back: Retour
+    index:
+      user_list: Liste des utilisateurs
+      email: Email
+      show: Voir
+      edit: Éditer
+      destroy: Supprimer
+      delete_confirmation: Êtes-vous sûr de vouloir supprimer l'utilisateur ?
+      new_user: Nouvel utilisateur
+    form:
+      submit: Enregistrer l'utilisateur
+      error:
+        one: "%{count} erreur a empêché le lien d'être enregistré"
+        other: "%{count} erreurs ont empêché le lien d'être enregistré"
