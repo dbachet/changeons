@@ -1,9 +1,7 @@
 = simple_form_for(@link) do |f|
   - if @link.errors.any?
     #error_explanation
-      h2
-        = pluralize(@link.errors.count, "error")
-        | prohibited this link from being saved:
+      h2= "#{t('.error', count: @link.errors.count)} #{t('.avoid_saving')}"
 
       ul
         - @link.errors.full_messages.each do |msg|
@@ -14,4 +12,4 @@
   .field
     = f.input :url
   actions
-    = f.button :submit
+    = f.button :submit, t('.submit')

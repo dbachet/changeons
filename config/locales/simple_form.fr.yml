@@ -12,3 +12,6 @@ fr:
           name: Changer le nom
           password: Changer le mot de passe
           current_password: Mot de passe actuel
+      link:
+        name: Description
+        url: URL

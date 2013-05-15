@@ -1,8 +1,8 @@
 .content
-  h1 Editing link
+  h1= t('.edit_link')
 
   = render 'form'
 
-  = link_to 'Show', @link
+  = link_to t('.show'), @link
   = ' | '
-  = link_to 'Back', links_path
+  = link_to t('.back'), links_path

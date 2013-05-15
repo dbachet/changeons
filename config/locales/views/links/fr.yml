@@ -1,0 +1,28 @@
+fr:
+  links:
+    index:
+      intro: Recensons ensemble l'information pour y voir plus claire.
+      change: Et changeons.
+      new_link: Créer un nouveau lien
+      shared_by: 'Partagé par %{by} il y a %{time}'
+      edit_link: Éditer
+      delete_link: Supprimer
+      confirm_link_deletion: Êtes-vous sûr de vouloir supprimer ce lien ?
+    show:
+      name: Description
+      url: URL
+      edit: Éditer
+      back: Retour
+    new:
+      new_link: Nouveau lien
+      back: Retour
+    edit:
+      edit_link: Édition du lien
+      show: Voir
+      back: Retour
+    form:
+      submit: Enregistrer le lien
+      error:
+        one: "%{count} erreur"
+        other: "%{count} erreurs"
+      avoid_saving: a empêché le lien d'être enregistré

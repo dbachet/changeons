@@ -1,12 +1,12 @@
 .content
   p
-    strong Name:
+    strong= t('.name')
     = @link.name
 
   p
-    strong Url:
+    strong= t('.url')
     = @link.url
 
 
-  = link_to 'Edit', edit_link_path(@link)
-  = link_to 'Back', links_path
+  = link_to t('.edit'), edit_link_path(@link)
+  = link_to t('.back'), links_path

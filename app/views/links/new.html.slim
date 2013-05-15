@@ -1,6 +1,6 @@
 .content
-  h1 New link
+  h1= t('.new_link')
 
   = render 'form'
 
-  = link_to 'Back', links_path
+  = link_to t('.back'), links_path
