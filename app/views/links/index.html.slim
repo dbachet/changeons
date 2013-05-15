@@ -7,7 +7,7 @@
   ul#links
     - @links.each do |link|
       li
-        h2= link_to link.name, link.url
+        h2= "#{link_to link.name, link.url} (#{link.language})"
         span.shared-by= t('.shared_by', by: link.user.name, time: distance_of_time_in_words_to_now(link.created_at))
         - if can? :manage, link
           .admin

@@ -6,5 +6,6 @@ FactoryGirl.define do
   factory :link do
     name
     url
+    language 'FR'
   end
 end

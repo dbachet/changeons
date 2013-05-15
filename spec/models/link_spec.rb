@@ -33,8 +33,24 @@ describe 'Link' do
       it { another_link.save.should_not be_true }
     end
 
-    context 'testing presence validation on name attribute' do
+    context 'testing presence validation on url attribute' do
       let(:another_link) { build :link, url: '' }
+      before { link.save }
+
+      it { another_link.should_not be_valid }
+      it { another_link.save.should_not be_true }
+    end
+
+    context 'testing presence validation on language attribute' do
+      let(:another_link) { build :link, language: '' }
+      before { link.save }
+
+      it { another_link.should_not be_valid }
+      it { another_link.save.should_not be_true }
+    end
+
+    context 'testing inclusion validation on language attribute' do
+      let(:another_link) { build :link, language: 'JK' }
       before { link.save }
 
       it { another_link.should_not be_valid }

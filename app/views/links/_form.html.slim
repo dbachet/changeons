@@ -11,5 +11,7 @@
     = f.input :name
   .field
     = f.input :url
+  .field
+    = f.collection_radio_buttons :language, Link::LANGUAGES.map{|lang| [lang, lang]}, :first, :last, checked: Link::LANGUAGES.first
   actions
     = f.button :submit, t('.submit')
