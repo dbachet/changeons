@@ -1,0 +1,14 @@
+fr:
+  simple_form:
+    labels:
+      user:
+        email: Email
+        name: Nom
+        remember_me: Se rappeler de moi
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        edit:
+          email: Changer l'email
+          name: Changer le nom
+          password: Changer le mot de passe
+          current_password: Mot de passe actuel

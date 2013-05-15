@@ -15,10 +15,10 @@ module ApplicationHelper
   end
 
   def profile_link_content
-    %Q{Profile <i class='icon-wrench'></i>}.html_safe
+    "#{t('.profile')} <i class='icon-wrench'></i>".html_safe
   end
 
   def logout_link_content
-    %Q{Logout <i class='icon-off'></i>}.html_safe
+    "#{t('.sign_out')} <i class='icon-off'></i>".html_safe
   end
 end
