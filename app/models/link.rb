@@ -1,4 +1,6 @@
 class Link < ActiveRecord::Base
+  has_one :category
+
   belongs_to :user
   LANGUAGES = ['FR', 'EN']
   validates :name, uniqueness: true, presence: true

@@ -2,6 +2,7 @@ Changeons::Application.routes.draw do
   devise_for :users
   scope '/admin' do
     resources :users
+    resources :categories, except: :show
   end
   resources :links
 

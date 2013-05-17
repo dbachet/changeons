@@ -1,0 +1,11 @@
+= simple_form_for(@category) do |f|
+  - if @category.errors.any?
+    #error_explanation
+      h2= t('.error', count: @category.errors.count)
+
+      ul
+        - @category.errors.full_messages.each do |msg|
+          li = msg
+
+  = f.input :name
+  = f.button :submit, t('.submit')

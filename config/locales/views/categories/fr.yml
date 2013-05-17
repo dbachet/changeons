@@ -1,0 +1,21 @@
+fr:
+  categories:
+    index:
+      category_list: Liste des catégories
+      name: Nom
+      show: Voir
+      edit: Éditer
+      destroy: Supprimer
+      delete_confirmation: Êtes-vous sûr de vouloir supprimer cette catégorie ?
+      new_category: Nouvelle catégorie
+    new:
+      new_category: Nouvelle catégorie
+      back: Retour
+    edit:
+      edit_category: Éditer catégorie
+      back: Retour
+    form:
+      submit: Enregistrer la catégorie
+      error:
+        one: "%{count} erreur a empêché le lien d'être enregistré"
+        other: "%{count} erreurs ont empêché le lien d'être enregistré"

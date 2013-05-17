@@ -1,0 +1,6 @@
+fr:
+  categories:
+    create:
+      success: La catégorie a été créée avec succès.
+    update:
+      success: La catégorie a été mise à jour avec succès.
