@@ -13,5 +13,7 @@
     = f.input :url
   .field
     = f.collection_radio_buttons :language, Link::LANGUAGES.map{|lang| [lang, lang]}, :first, :last, checked: Link::LANGUAGES.first
+  .field
+    = f.association :category, as: :radio
   actions
     = f.button :submit, t('.submit')

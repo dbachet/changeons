@@ -1,5 +1,5 @@
 class Link < ActiveRecord::Base
-  has_one :category
+  belongs_to :category
 
   belongs_to :user
   LANGUAGES = ['FR', 'EN']

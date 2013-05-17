@@ -15,5 +15,5 @@ fr:
       link:
         name: Description
         url: URL
-      category:
-        name: Nom
+        category_id:
+          name: Nom
