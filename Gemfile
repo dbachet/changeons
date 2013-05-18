@@ -11,7 +11,7 @@ gem 'rolify'
 gem 'slim'
 gem 'rails-i18n'
 
-gem 'bootstrap-sass', '~> 2.3.1.1'
+gem 'bootstrap-sass', '2.3.1.0'
 gem 'rails_bootstrap_navbar'
 
 # Gems used only for assets and not required

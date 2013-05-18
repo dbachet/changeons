@@ -51,7 +51,7 @@ GEM
     arel (4.0.0)
     atomic (1.1.9)
     bcrypt-ruby (3.0.1)
-    bootstrap-sass (2.3.1.1)
+    bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     builder (3.1.4)
     cancan (1.6.10)
@@ -129,7 +129,7 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
-    sass (3.2.8)
+    sass (3.2.9)
     sass-rails (4.0.0.rc1)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
@@ -176,7 +176,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 2.3.1.1)
+  bootstrap-sass (= 2.3.1.0)
   cancan
   capybara
   coffee-rails (~> 4.0.0.beta1)
