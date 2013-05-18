@@ -11,6 +11,9 @@ gem 'rolify'
 gem 'slim'
 gem 'rails-i18n'
 
+# Env var config
+gem 'figaro'
+
 gem 'bootstrap-sass', '2.3.1.0'
 gem 'rails_bootstrap_navbar'
 

@@ -10,6 +10,7 @@
   Role.create!(name: name) unless Role.where(name: name).exists?
 end
 
-user = User.create!(email: ENV['admin_email'], name: ENV['admin_name'], password: ENV['admin_pwd'])
+user = User.find_by(email: ENV['ADMIN_EMAIL'])
+user = User.create(email: ENV['ADMIN_EMAIL'].dup, password: ENV['ADMIN_PWD'].dup, name: ENV['ADMIN_NAME'].dup) unless user
 user.add_role(User::ROLES.last)
 
