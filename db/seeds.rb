@@ -11,6 +11,7 @@
 end
 
 user = User.find_by(email: ENV['ADMIN_EMAIL'])
-user = User.create(email: ENV['ADMIN_EMAIL'].dup, password: ENV['ADMIN_PWD'].dup, name: ENV['ADMIN_NAME'].dup) unless user
+user = User.new(email: ENV['ADMIN_EMAIL'].dup, password: ENV['ADMIN_PWD'].dup, name: ENV['ADMIN_NAME'].dup) unless user
 user.add_role(User::ROLES.last)
+user.save
 
