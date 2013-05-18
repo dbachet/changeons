@@ -6,4 +6,5 @@ class Link < ActiveRecord::Base
   validates :name, uniqueness: true, presence: true
   validates :url, uniqueness: true, presence: true
   validates :language, presence: true, inclusion: { in: LANGUAGES }
+  validates :category, presence: true
 end
