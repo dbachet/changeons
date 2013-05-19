@@ -11,6 +11,10 @@ body {
 
 .navbar .container {
   max-width: 940px;
+  .brand {
+    font-family: 'Pacifico', cursive;
+    color: #06A2CB;
+  }
 }
 
 .navbar-inner { @include rounded(0) }
@@ -25,3 +29,5 @@ body {
   background-color: white;
   .content { padding: 1em; }
 }
+
+.label { font-weight: 400 }

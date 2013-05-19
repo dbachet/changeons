@@ -13,6 +13,7 @@
     color: #777;
   }
   small {
+    font-family: 'Pacifico', cursive;
     font-weight: 200;
     color: #333333;
     text-shadow: 0px 1px white;
@@ -20,9 +21,10 @@
 }
 section#links {
   h2 {
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 20px;
+    line-height: 24px;
     font-weight: 200;
+    margin-bottom: 0;
     .label {
       vertical-align: middle;
     }
@@ -31,7 +33,7 @@ section#links {
       padding: 0 5px 0 10px;
     }
     small {
-      font-size: 55%;
+      font-size: 70%;
       font-weight: 200;
       vertical-align: middle;
     }
