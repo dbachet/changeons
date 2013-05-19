@@ -1,11 +1,5 @@
 fr:
   users:
-    new:
-      new_user: Nouvel utilisateur
-      back: Retour
-    edit:
-      edit_user: Édition de l'utilisateur
-      back: Retour
     index:
       user_list: Liste des utilisateurs
       email: Email
@@ -15,7 +9,8 @@ fr:
       delete_confirmation: Êtes-vous sûr de vouloir supprimer l'utilisateur ?
       new_user: Nouvel utilisateur
     form:
+      title: Utitilisateur
       submit: Enregistrer l'utilisateur
       error:
-        one: "%{count} erreur a empêché le lien d'être enregistré"
-        other: "%{count} erreurs ont empêché le lien d'être enregistré"
+        one: "%{count} erreur a empêché l'utilisateur d'être enregistré"
+        other: "%{count} erreurs ont empêché l'utilisateur d'être enregistré"
