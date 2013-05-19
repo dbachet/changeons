@@ -56,5 +56,13 @@ describe 'Link' do
       it { another_link.should_not be_valid }
       it { another_link.save.should_not be_true }
     end
+
+    context 'testing presence validation on category attribute' do
+      let(:another_link) { build :link, category: nil }
+      before { link.save }
+
+      it { another_link.should_not be_valid }
+      it { another_link.save.should_not be_true }
+    end
   end
 end

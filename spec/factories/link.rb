@@ -7,5 +7,6 @@ FactoryGirl.define do
     name
     url
     language 'FR'
+    category
   end
 end
