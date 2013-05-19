@@ -8,19 +8,25 @@ gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git', branch: 'v3.0.0.rc'
 gem 'cancan'
 gem 'rolify'
-gem 'slim'
 gem 'rails-i18n'
 
 # Env var config
 gem 'figaro'
 
+# Template
+gem 'slim'
 gem 'bootstrap-sass', '2.3.1.0'
+
+# icons library
+gem 'font-awesome-rails'
+
+# Bootstrap easy to configure navbar
 gem 'rails_bootstrap_navbar'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 4.0.0.beta1'
+  gem 'sass-rails', git: 'https://github.com/rails/sass-rails.git', branch: 'master'
   gem 'coffee-rails', '~> 4.0.0.beta1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -33,6 +39,7 @@ group :production, :staging, :development do
   gem 'unicorn'
 end
 
+# Heroku needed gems for rails 4
 gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
 gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 
