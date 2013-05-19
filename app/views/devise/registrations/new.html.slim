@@ -1,12 +1,13 @@
 .content
-  h2= t('.create_account')
-  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-horizontal'}) do |f|
+    legend= t('.create_account')
     = f.error_notification
-    .form-inputs
-      = f.input :email, required: true, autofocus: true
-      = f.input :name, required: false
-      = f.input :password, required: true
-      = f.input :password_confirmation, required: true
+    = f.input :email, autofocus: true, input_html: {class: 'input-xxlarge'}
+    = f.input :name, input_html: {class: 'input-xxlarge'}
+    = f.input :password, input_html: {class: 'input-xxlarge'}
+    = f.input :password_confirmation, input_html: {class: 'input-xxlarge'}
     .form-actions
-      = f.button :submit, t('.submit')
-  = render 'devise/shared/links'
+      = f.button :submit, t('.submit'), class: 'btn-primary'
+      br
+      br
+      = render 'devise/shared/links'

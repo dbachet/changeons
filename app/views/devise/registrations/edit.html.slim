@@ -1,17 +1,17 @@
 .content
-  h2= t('.edit_user')
-  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'form-horizontal', method: :put }) do |f|
+    legend= t('.edit_user')
     = f.error_notification
-    .form-inputs
-      = f.input :email, required: true, autofocus: true
-      - if devise_mapping.confirmable? && resource.pending_reconfirmation?
-        p= t('.waiting_confirmation')
-      = f.input :name, required: false
-      = f.input :password, autocomplete: 'off', hint: t('.leave_it_blank'), required: false
-      = f.input :password_confirmation, required: false
-      = f.input :current_password, hint: t('.need_current_password'), required: true
+    = f.input :email, autofocus: true, input_html: {class: 'input-xxlarge'}
+    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+      p= t('.waiting_confirmation')
+    = f.input :name, input_html: {class: 'input-xxlarge'}
+    = f.input :password, autocomplete: 'off', hint: t('.leave_it_blank'), input_html: {class: 'input-xxlarge'}
+    = f.input :password_confirmation, input_html: {class: 'input-xxlarge'}
+    = f.input :current_password, hint: t('.need_current_password'), input_html: {class: 'input-xxlarge'}
     .form-actions
-      = f.button :submit, t('.submit')
-  h3= t('.cancel_my_account')
-  p #{t('.unhappy')} #{link_to t('.cancel_account'), registration_path(resource_name), data: { confirm: t('.confirm_cancellation') }, method: :delete}
-  = link_to t('.back'), :back
+      = f.button :submit, t('.submit'), class: 'btn-primary'
+      span style="margin-left: 10px" = link_to t('.back'), :back, class: 'btn btn-danger'
+      h4= t('.cancel_my_account')
+      p #{t('.unhappy')} #{link_to t('.cancel_account'), registration_path(resource_name), data: { confirm: t('.confirm_cancellation') }, method: :delete}
+
