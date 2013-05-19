@@ -8,14 +8,9 @@ fr:
       destroy: Supprimer
       delete_confirmation: Êtes-vous sûr de vouloir supprimer cette catégorie ?
       new_category: Nouvelle catégorie
-    new:
-      new_category: Nouvelle catégorie
-      back: Retour
-    edit:
-      edit_category: Éditer catégorie
-      back: Retour
     form:
+      title: Catégorie
       submit: Enregistrer la catégorie
       error:
-        one: "%{count} erreur a empêché le lien d'être enregistré"
-        other: "%{count} erreurs ont empêché le lien d'être enregistré"
+        one: "%{count} erreur a empêché la catégorie d'être enregistrée"
+        other: "%{count} erreurs ont empêché la catégorie d'être enregistrée"
