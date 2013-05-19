@@ -10,8 +10,8 @@ feature 'Link creation' do
       fill_in 'Description', :with => 'That link deals with...'
       fill_in 'URL', :with => 'http://some-url.com'
     end
-    choose 'FR'
-    choose category.name
+    select 'FR'
+    select category.name
     click_button 'Enregistrer le lien'
     find('.alert-info').should have_content 'Le lien a été créé avec succès.'
     Link.last.user_id.should eql 1
