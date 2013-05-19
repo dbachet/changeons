@@ -21,6 +21,7 @@ fr:
       show: Voir
       back: Retour
     form:
+      category: Catégorie
       submit: Enregistrer le lien
       error:
         one: "%{count} erreur a empêché le lien d'être enregistré"
