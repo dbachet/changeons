@@ -17,3 +17,5 @@ fr:
         url: URL
         category_id:
           name: Nom
+      category:
+        name: Nom

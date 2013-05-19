@@ -2,6 +2,7 @@ fr:
   application:
     nav:
       users: Utilisateurs
+      categories: Catégories
       profile: Mon profil
       sign_out: Se déconnecter
       sign_in: Se connecter
