@@ -9,7 +9,8 @@
       - @links.each do |link|
         li
           h2
-            .label= link.category.name
+            .label*{style: "background-color: #{link.category.color}"}
+              = link.category.name
             span.link= link_to(link.name, link.url)
             small  (#{link.language.downcase})
           aside
