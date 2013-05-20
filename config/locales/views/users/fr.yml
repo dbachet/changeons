@@ -11,6 +11,7 @@ fr:
     form:
       title: Utitilisateur
       submit: Enregistrer l'utilisateur
+      back: Retour
       error:
         one: "%{count} erreur a empêché l'utilisateur d'être enregistré"
         other: "%{count} erreurs ont empêché l'utilisateur d'être enregistré"

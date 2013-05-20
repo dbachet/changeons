@@ -11,6 +11,7 @@ fr:
     form:
       title: Catégorie
       submit: Enregistrer la catégorie
+      back: Retour
       error:
         one: "%{count} erreur a empêché la catégorie d'être enregistrée"
         other: "%{count} erreurs ont empêché la catégorie d'être enregistrée"

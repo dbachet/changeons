@@ -19,6 +19,7 @@ fr:
       language: Langage
       category: Catégorie
       submit: Enregistrer le lien
+      back: Retour
       error:
         one: "%{count} erreur a empêché le lien d'être enregistré"
         other: "%{count} erreurs ont empêché le lien d'être enregistré"
