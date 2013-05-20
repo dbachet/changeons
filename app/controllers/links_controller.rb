@@ -6,7 +6,7 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.eager_load(:category, :user).all
+    @links = Link.eager_load(:category, :user).order(created_at: :desc).all
   end
 
   # GET /links/1
