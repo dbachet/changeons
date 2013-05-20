@@ -3,6 +3,7 @@ fr:
     index:
       intro: Rassemblons ensemble l'information pour y voir plus claire.
       change: Et changeons.
+      links: Liens partagés
       new_link: Créer un nouveau lien
       shared_by: 'Partagé par %{by} il y a %{time}'
       edit_link: Éditer

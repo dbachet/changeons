@@ -20,24 +20,6 @@
   }
 }
 section#links {
-  h2 {
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 200;
-    margin-bottom: 0;
-    .label {
-      vertical-align: middle;
-    }
-    .link {
-      vertical-align: middle;
-      padding: 0 5px 0 10px;
-    }
-    small {
-      font-size: 70%;
-      font-weight: 200;
-      vertical-align: middle;
-    }
-  }
   ul {
     margin: 0;
     li {
@@ -49,6 +31,45 @@ section#links {
       &:last-child {
         padding-bottom: 2px;
         hr { border: none }
+      }
+      .left {
+        display: inline-block;
+        text-decoration: none;
+        width: 4%;
+        font-size: 18px;
+        line-height: 18px;
+        margin-left: 1%;
+        vertical-align: middle;
+        i {
+          background: none;
+          color: #555;
+          text-shadow: 0px 1px 0px #fff;
+          &:hover { color: #000; }
+        }
+      }
+      .right {
+        width: 95%;
+        display: inline-block;
+        vertical-align: middle;
+        h2 {
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 200;
+          margin-bottom: 0;
+          margin-top: 0;
+          .label {
+            vertical-align: middle;
+          }
+          .link {
+            vertical-align: middle;
+            padding: 0 5px 0 10px;
+          }
+          small {
+            font-size: 70%;
+            font-weight: 200;
+            vertical-align: middle;
+          }
+        }
       }
     }
     span.shared-by { color: grey }
