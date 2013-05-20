@@ -27,7 +27,7 @@ gem 'rails_bootstrap_navbar'
 # in production environments by default.
 group :assets do
   gem 'sass-rails', git: 'https://github.com/rails/sass-rails.git', branch: 'master'
-  gem 'coffee-rails', '~> 4.0.0.beta1'
+  gem 'coffee-rails', '~> 4.0.0.rc1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
@@ -38,10 +38,6 @@ end
 group :production, :staging, :development do
   gem 'unicorn'
 end
-
-# Heroku needed gems for rails 4
-gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 
 gem 'jquery-rails'
 
@@ -62,6 +58,9 @@ group :test do
 end
 
 group :staging, :production do
+  # Heroku needed gems for rails 4
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
   gem 'pg', '0.14.1'
 end
 
