@@ -1,4 +1,4 @@
-= nav_bar brand: 'Changeons', brand_link: links_path, responsive: true do
+= nav_bar brand: 'Changeons', brand_link: root_path, responsive: true do
   = menu_group do
     - if can? :index, User
       = menu_item t('.users'), users_path
