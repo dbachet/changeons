@@ -1,0 +1,9 @@
+fr:
+  user_mailer:
+    welcome_with_password:
+      hello: "Bonjour,"
+      we_created_account: "Quelqu'un a créé un compte pour toi sur Changeons.org !"
+      here_is_your_info: "Voici les informations pour t'autentifier avec ton compte:"
+      login_email: "Login/email:"
+      password: "Mot de passe:"
+      change_password: "N'oublies pas de changer ton mot de passe dès la première connexion !"

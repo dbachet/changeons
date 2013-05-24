@@ -18,6 +18,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      UserMailer.welcome_with_password(@user, user_params[:password]).deliver unless @user.invalid?
       redirect_to users_path, notice: t('.success')
     else
       render :new
