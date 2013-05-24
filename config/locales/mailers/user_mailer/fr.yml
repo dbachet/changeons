@@ -2,3 +2,5 @@ fr:
   user_mailer:
     welcome_with_password:
       subject: Bienvenue sur Changeons !
+    welcome:
+      subject: Bienvenue sur Changeons !

@@ -6,4 +6,9 @@ class UserMailer < ActionMailer::Base
     @user = user
     mail(to: user.email, subject: t('.subject')).deliver
   end
+
+  def welcome(user)
+    @user = user
+    mail(to: user.email, subject: t('.subject')).deliver
+  end
 end

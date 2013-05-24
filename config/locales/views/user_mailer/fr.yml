@@ -1,9 +1,14 @@
 fr:
   user_mailer:
     welcome_with_password:
-      hello: "Bonjour,"
+      hello: "Bonjour %{name},"
       we_created_account: "Quelqu'un a créé un compte pour toi sur Changeons.org !"
-      here_is_your_info: "Voici les informations pour t'autentifier avec ton compte:"
-      login_email: "Login/email:"
+      here_is_your_info: "Voici les informations pour t'autentifier avec ce compte:"
+      login_email: "Nom d'utilisateur / email:"
       password: "Mot de passe:"
       change_password: "N'oublies pas de changer ton mot de passe dès la première connexion !"
+      you_can_login: Tu peux maintenant te connecter avec ton email et mot de passe sur
+    welcome:
+      hello: "Bonjour %{name},"
+      account_created_successfully: Ton compte a été activé avec succès !
+      you_can_login: Tu peux maintenant te connecter avec ton email et mot de passe sur
