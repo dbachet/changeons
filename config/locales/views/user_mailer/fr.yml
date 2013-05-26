@@ -1,6 +1,0 @@
-fr:
-  user_mailer:
-    welcome:
-      hello: "Bonjour %{name},"
-      account_created_successfully: Ton compte a été activé avec succès !
-      you_can_login: Tu peux maintenant te connecter avec ton email et mot de passe sur
