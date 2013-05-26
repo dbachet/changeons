@@ -1,0 +1,5 @@
+development:
+  ADMIN_EMAIL: 'test@test.com'
+  ADMIN_NAME: 'Testing user'
+  ADMIN_PWD: 'testtest'
+  POSTAGEAPP_KEY: 'xLrck6bLL6nhtWsSlNpBmTC4IPwhTTAI'

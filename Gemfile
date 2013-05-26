@@ -13,6 +13,9 @@ gem 'rails-i18n'
 # Env var config
 gem 'figaro'
 
+# Email service
+gem 'postageapp'
+
 # Template
 gem 'slim'
 gem 'bootstrap-sass', '2.3.1.0'
