@@ -1,24 +1,7 @@
 fr:
   users:
-    registrations:
-      create:
-        welcome:
-          subject: Bienvenue sur Changeons.Org !
-          hello: "Bonjour %{name},"
-          account_created_successfully: Ton compte a été activé avec succès !
-          you_can_login: Tu peux dès à présent te connecter avec ton email et mot de passe sur
-          greetings: "À bientôt,"
     create:
       success: L'utilisateur a été créé avec succès.
-      welcome_with_password:
-        subject: Bienvenue sur Changeons.Org !
-        hello: "Bonjour %{name},"
-        we_created_account: "Quelqu'un a créé un compte pour toi sur Changeons.org !"
-        here_is_your_info: "Voici les informations de ton compte:"
-        login_email: "Nom d'utilisateur / email: "
-        password: "Mot de passe: "
-        change_password: "N'oublies pas de changer ton mot de passe dès la première connexion !"
-        you_can_login: Tu peux dès à présent te connecter avec ton email et mot de passe sur
-        greetings: "À bientôt,"
+
     update:
       success: L'utilisateur a été mis à jour avec succès.

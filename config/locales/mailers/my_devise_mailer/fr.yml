@@ -1,0 +1,10 @@
+fr:
+  my_devise_mailer:
+    reset_password_instructions:
+      subject: Demande de changement de mot de passe
+      hello: "Bonjour %{name}"
+      someone_requested_password_reset: "Quelqu'un a envoyé une demande pour changer ton mot de passe. Tu peux le changer grâce au lien ci-dessous."
+      change_my_password: Changer mon mot de passe
+      ignore_email: "Si tu n'as pas fait cette demande, alors ignore cet email !"
+      your_password_wont_change: "Ton mot de passe ne changera pas tant que tu n'iras pas sur la page du lien ci-dessus et que tu n'en crééras pas un nouveau."
+      greetings: "À bientôt,"
