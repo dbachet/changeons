@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   authorize_resource
 
-
   def index
     @users = User.all
   end
@@ -18,27 +17,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      request = PostageApp::Request.new(:send_message, {
-        'headers' => {
-          'subject'  => t('.welcome_with_password.subject')
-        },
-        'recipients'  => {
-          @user.email => {
-            hello: t('.welcome_with_password.hello', name: @user.name),
-            we_created_account: t('.welcome_with_password.we_created_account'),
-            here_is_your_info: t('.welcome_with_password.here_is_your_info'),
-            login_email: t('.welcome_with_password.login_email'),
-            user_email: @user.email,
-            password: t('.welcome_with_password.password'),
-            user_password: user_params[:password],
-            change_password: t('.welcome_with_password.change_password'),
-            you_can_login: t('.welcome_with_password.you_can_login'),
-            greetings: t('.welcome_with_password.greetings')
-          }
-        },
-        'template' => 'welcome-with-password'
-      })
-      response = request.send
+      UserMailer.welcome_with_password(@user, user_params[:password]).deliver
       redirect_to users_path, notice: t('.success')
     else
       render :new

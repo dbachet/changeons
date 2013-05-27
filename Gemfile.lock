@@ -22,6 +22,14 @@ GIT
       warden (~> 1.2.1)
 
 GIT
+  remote: git://github.com/postageapp/postageapp-ruby.git
+  revision: 4141c459a804055356459d41b3c9e64c23b248ac
+  branch: rails4
+  specs:
+    postageapp (1.0.19)
+      json
+
+GIT
   remote: https://github.com/plataformatec/simple_form.git
   revision: d2f1c63fa4b3fc93ef8c12610261960c8b0a5ab9
   branch: v3.0.0.rc
@@ -120,8 +128,6 @@ GEM
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
-    postageapp (1.0.19)
-      json
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -208,7 +214,7 @@ DEPENDENCIES
   jbuilder (~> 1.0.1)
   jquery-rails
   pg (= 0.14.1)
-  postageapp
+  postageapp!
   rails (= 4.0.0.rc1)
   rails-i18n
   rails3_serve_static_assets!

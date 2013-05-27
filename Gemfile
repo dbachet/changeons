@@ -14,7 +14,7 @@ gem 'rails-i18n'
 gem 'figaro'
 
 # Email service
-gem 'postageapp'
+gem 'postageapp', git: 'git://github.com/postageapp/postageapp-ruby.git', branch: 'rails4'
 
 # Template
 gem 'slim'
