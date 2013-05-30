@@ -1,17 +1,5 @@
 .content
   section#link
-    a.left href=links_path title=t('.links')
-      i.icon-external-link
-    .right
-      h2
-        .label style="background-color: #{@link.category.color}"
-          = @link.category.name
-        span.link= link_to(@link.name, @link.url)
-        small= "(#{@link.language.downcase})"
-      aside
-        .shared-by= t('.shared_by', by: @link.user.name, time: distance_of_time_in_words_to_now(@link.created_at))
-    p.url
-      strong= t('.url')
-      span= link_to @link.url
+    = render @link
 
   = render partial: 'shared/comments'

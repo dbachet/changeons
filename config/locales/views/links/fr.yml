@@ -3,18 +3,7 @@ fr:
     index:
       intro: Rassemblons ensemble l'information pour y voir plus clair.
       change: Et changeons.
-      links: Liens partagés
       new_link: Créer un nouveau lien
-      shared_by: 'Partagé par %{by} il y a %{time}'
-      edit_link: Éditer
-      delete_link: Supprimer
-      confirm_link_deletion: Êtes-vous sûr de vouloir supprimer ce lien ?
-    show:
-      links: Liens partagés
-      shared_by: 'Partagé par %{by} il y a %{time}'
-      url: URL
-      edit: Éditer
-      back: Retour
     form:
       title: Lien
       language: Langage
@@ -24,3 +13,10 @@ fr:
       error:
         one: "%{count} erreur a empêché le lien d'être enregistré"
         other: "%{count} erreurs ont empêché le lien d'être enregistré"
+    link:
+      links: Liens partagés
+      shared_by: 'Partagé par %{by} il y a %{time}'
+      edit_link: Éditer
+      delete_link: Supprimer
+      confirm_link_deletion: Êtes-vous sûr de vouloir supprimer ce lien ?
+      url: URL

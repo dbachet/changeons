@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @mixin link {
+  font-weight: 200;
   .left {
     display: inline-block;
     text-decoration: none;
@@ -41,6 +42,10 @@
       }
     }
   }
+  .url {
+    padding: 20px 0 0 5%;
+    span { margin-left: 5px; }
+  }
 }
 
 .intro {
@@ -66,7 +71,6 @@ section#links {
     li {
       padding: 0 1em 0 2px;
       list-style: none;
-      font-weight: 200;
       &:hover { background: #eeeeee; }
       hr { margin: 10px 0; }
       &:last-child {
@@ -80,8 +84,4 @@ section#links {
 
 section#link {
   @include link;
-  .url {
-    padding: 20px 0;
-    span { margin-left: 5px; }
-  }
 }
