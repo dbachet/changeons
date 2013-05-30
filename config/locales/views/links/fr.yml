@@ -10,7 +10,8 @@ fr:
       delete_link: Supprimer
       confirm_link_deletion: Êtes-vous sûr de vouloir supprimer ce lien ?
     show:
-      name: Description
+      links: Liens partagés
+      shared_by: 'Partagé par %{by} il y a %{time}'
       url: URL
       edit: Éditer
       back: Retour
