@@ -2,4 +2,7 @@ development:
   ADMIN_EMAIL: 'test@test.com'
   ADMIN_NAME: 'Testing user'
   ADMIN_PWD: 'testtest'
-  POSTAGEAPP_KEY: 'xLrck6bLL6nhtWsSlNpBmTC4IPwhTTAI'
+  POSTAGEAPP_KEY: 'xxxxxxxxxxxxxx'
+  SECRET_TOKEN: 'xxxxxxxxxx'
+  BASE_URL: 'localhost:3000'
+  DISQUS_SHORTNAME: 'xxxxxxxxx'
