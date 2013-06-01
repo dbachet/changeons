@@ -1,7 +1,12 @@
 #disqus_thread
 javascript:
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-  var disqus_shortname = '#{ENV['DISQUS_SHORTNAME']}'; // required: replace example with your forum shortname
+  var disqus_shortname = "#{ENV['DISQUS_SHORTNAME']}"; // required: replace example with your forum shortname
+  var disqus_identifier = "#{Rails.env}_#{Link::DISQUS_IDENTIFIER}_#{@link.id}";
+  var disqus_title = "#{@link.name}";
+  var disqus_url = "#{link_url @link}";
+  var disqus_category = "#{t(".category.#{Link::DISQUS_IDENTIFIER}")}";
+
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {

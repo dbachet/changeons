@@ -1,4 +1,5 @@
 class Link < ActiveRecord::Base
+  DISQUS_IDENTIFIER = 'link'
   belongs_to :category
 
   belongs_to :user
