@@ -5,7 +5,7 @@ javascript:
   var disqus_identifier = "#{Rails.env}_#{Link::DISQUS_IDENTIFIER}_#{@link.id}";
   var disqus_title = "#{@link.name}";
   var disqus_url = "#{link_url @link}";
-  var disqus_category = "#{t(".category.#{Link::DISQUS_IDENTIFIER}")}";
+  var disqus_category_id = "#{t(".category.#{Link::DISQUS_IDENTIFIER}_id")}";
 
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
