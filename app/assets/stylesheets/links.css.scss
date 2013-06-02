@@ -41,6 +41,9 @@
         vertical-align: middle;
       }
     }
+    aside {
+      .comment-count i { margin: 0 5px 0 10px; }
+    }
   }
   .url {
     padding: 20px 0 0 5%;
