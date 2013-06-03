@@ -1,5 +1,4 @@
 class Link < ActiveRecord::Base
-  DISQUS_IDENTIFIER = 'link'
   belongs_to :category
 
   belongs_to :user
@@ -8,4 +7,12 @@ class Link < ActiveRecord::Base
   validates :url, uniqueness: true, presence: true
   validates :language, presence: true, inclusion: { in: LANGUAGES }
   validates :category, presence: true
+
+  def self.disqus_category_id
+    ENV["DISQUS_LINK_ID"]
+  end
+
+  def disqus_uniq_identifier
+    "#{Rails.env}_LINK_#{id}"
+  end
 end

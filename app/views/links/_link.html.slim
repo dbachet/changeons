@@ -10,7 +10,7 @@ a.left href=links_path title=t('.links')
     span.shared-by= t('.shared_by', by: link.user.name, time: distance_of_time_in_words_to_now(link.created_at))
     span.comment-count
       i.icon-comment-alt
-      = link_to '', "#{link_url link}#disqus_thread", 'data-disqus-identifier' => "#{Rails.env}_#{Link::DISQUS_IDENTIFIER}_#{link.id}"
+      = link_to '', "#{link_url link}#disqus_thread", 'data-disqus-identifier' => link.disqus_uniq_identifier
     - if can? :manage, link
       .admin
         = link_to t('.edit_link'), edit_link_path(link)

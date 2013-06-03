@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe 'Link' do
-  let(:link) { build :link }
-
-  subject { link }
 
   describe 'testing validations' do
+    let(:link) { build :link }
+    subject { link }
+
     it { should be_valid }
     it { subject.save.should be_true }
 
@@ -65,4 +65,14 @@ describe 'Link' do
       it { another_link.save.should_not be_true }
     end
   end
+
+  describe '#disqus_uniq_identifier' do
+    let(:link) { create :link }
+    it { link.disqus_uniq_identifier.should eql 'test_LINK_1' }
+  end
+
+  describe '#disqus_category_id' do
+    it { Link.disqus_category_id.should eql '2408371' }
+  end
+
 end
