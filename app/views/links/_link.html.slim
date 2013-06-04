@@ -11,7 +11,7 @@ a.left href=links_path title=t('.links')
     span.comment-count
       i.icon-comment-alt
       = link_to '', "#{link_url link}#disqus_thread", 'data-disqus-identifier' => link.disqus_uniq_identifier
-    - if can? :manage, link
+    - if can?(:update, link) && can?(:destroy, link)
       .admin
         = link_to t('.edit_link'), edit_link_path(link)
         = " - "

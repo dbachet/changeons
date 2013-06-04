@@ -6,3 +6,10 @@ fr:
       profile: Mon profil
       sign_out: Se déconnecter
       sign_in: Se connecter
+  unauthorized:
+    read:
+      all: "Vous n'êtes pas authorisé."
+    manage:
+      all: "Vous n'êtes pas authorisé."
+    update:
+      link: "Vous n'êtes pas authorisé à modifier le lien partagé par un autre utilisateur."
