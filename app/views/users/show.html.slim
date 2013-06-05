@@ -1,9 +1,11 @@
 .intro
   b Mes liens partagés
 section#links
-  ul
-    - @links.each do |link|
-      li
-        = render link
-
+  - if @links.present?
+    ul
+      - @links.each do |link|
+        li
+          = render link
+  - else
+    = t('.no_link')
 = render 'shared/comment_count'

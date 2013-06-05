@@ -1,5 +1,7 @@
 fr:
   users:
+    show:
+      no_link: Vous n'avez encore partagé aucun lien.
     index:
       user_list: Liste des utilisateurs
       email: Email
