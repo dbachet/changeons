@@ -16,10 +16,13 @@ describe 'User' do
 
     context 'Member abilities' do
       let(:user){ create :user }
+      let(:another_user){ create :user }
       let(:link) { create :link, user: user }
       let(:another_user_link) { create :link }
 
       context 'Abilities about User' do
+        it{ should be_able_to(:show, user) }
+        it{ should_not be_able_to(:show, another_user) }
         it{ should_not be_able_to(:index, User) }
         it{ should_not be_able_to(:new, User) }
         it{ should_not be_able_to(:create, User) }

@@ -14,6 +14,10 @@ module ApplicationHelper
     end
   end
 
+  def my_links_link_content
+    "#{t('.my_links')} <i class='icon-external-link'></i>".html_safe
+  end
+
   def profile_link_content
     "#{t('.profile')} <i class='icon-wrench'></i>".html_safe
   end

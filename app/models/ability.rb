@@ -8,6 +8,7 @@ class Ability
       if user.admin?
         can :manage, :all
       elsif user.member?
+        can :show, User, id: user.id
         can [:read, :create], Link
         can [:update, :destroy], Link, user_id: user.id
       else

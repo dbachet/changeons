@@ -3,6 +3,7 @@ fr:
     nav:
       users: Utilisateurs
       categories: Catégories
+      my_links: Mes liens
       profile: Mon profil
       sign_out: Se déconnecter
       sign_in: Se connecter

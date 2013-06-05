@@ -7,6 +7,7 @@
   = menu_group pull: :right do
     - if current_user
       = drop_down current_user.email do
+        = menu_item my_links_link_content, user_path(current_user)
         = menu_item profile_link_content, edit_user_registration_path
         = drop_down_divider
         = menu_item logout_link_content, destroy_user_session_path, method: :delete
