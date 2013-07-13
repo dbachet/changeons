@@ -12,6 +12,15 @@ body
       .span12
         = render partial: 'flash_messages', flash: flash
   .container.frame
+    .row-fluid
+      .span12.main
+        = yield
+  footer
+    .container
       .row-fluid
-        .span12.main
-          = yield
+        .span9 © 2013 Damien Bachet // Hébergé par #{link_to(' Heroku', 'http://www.heroku.com')}
+        .span3
+          = link_to(content_tag(:i, '', class: 'icon-twitter'),
+          'https://twitter.com/ChangeonsOrg', class: 'circle-footer')
+          = link_to(content_tag(:i, '', class: 'icon-github'),
+          'https://github.com/dbachet/changeons', class: 'circle-footer')
