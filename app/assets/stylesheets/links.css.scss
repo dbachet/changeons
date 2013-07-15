@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import 'shared_sass.css.scss';
+
 @mixin link {
   font-weight: 200;
   .left {
@@ -13,9 +15,8 @@
     margin-left: 1%;
     vertical-align: middle;
     i {
-      color: #555;
-      text-shadow: 0px 1px 0px #fff;
-      &:hover { color: #000; }
+      color: $white-color;
+      &:hover { color: $custom-link-color }
     }
   }
   .right {
@@ -28,9 +29,7 @@
       font-weight: 200;
       margin-bottom: 0;
       margin-top: 0;
-      .label {
-        vertical-align: middle;
-      }
+      .label { vertical-align: middle }
       .link {
         vertical-align: middle;
         padding: 0 5px 0 10px;
@@ -39,15 +38,19 @@
         font-size: 70%;
         font-weight: 200;
         vertical-align: middle;
+        color: $custom-link-color;
       }
     }
     aside {
-      .comment-count i { margin: 0 5px 0 10px; }
+      .comment-count {
+        float: right;
+        i { margin: 0 5px 0 10px }
+      }
     }
   }
   .url {
     padding: 20px 0 0 5%;
-    span { margin-left: 5px; }
+    span { margin-left: 5px }
   }
 }
 
@@ -70,7 +73,7 @@
   }
 }
 
-.content { padding:0; }
+.content { padding:0 }
 
 section#sidebar {
   width: 32%;
@@ -81,20 +84,23 @@ section#sidebar {
     font-size: 20px;
     margin-top: 30px;
   }
-  a i { margin-right: 7px; }
+  a i { margin-right: 7px }
 }
 
 section#links {
-  padding: 1em 1.5%;
+  padding: 0;
   width: 62%;
   float: left;
   ul {
     margin: 0;
     li {
-      padding: 0 1em 0 2px;
+      padding: 25px 1em 0px 20px;
       list-style: none;
-      &:hover { background: #eeeeee; }
-      hr { margin: 10px 0; }
+      hr {
+        margin: 35px 0 0 0;
+        border-top: 1px solid $darken-background-color;
+        border-bottom: 1px solid $lighten-background-color;
+      }
       &:last-child {
         padding-bottom: 2px;
         hr { border: none }
@@ -104,6 +110,4 @@ section#links {
   }
 }
 
-section#link {
-  @include link;
-}
+section#link { @include link }

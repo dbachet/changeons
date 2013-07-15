@@ -1,0 +1,13 @@
+@mixin rounded($radius: 0.5em) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+$white-color: #fff;
+$darken-white-color: darken($white-color, 10%);
+$lighten-black-color: rgba(0,0,0,0.4);
+$background-color: #34AB00;
+$darken-background-color: darken($background-color, 4%);
+$lighten-background-color: lighten($background-color, 3%);
+$custom-link-color: #555;

@@ -1,19 +1,11 @@
 .intro
   b= "#{t('.intro')} "
   small= t('.change')
+h2 Tous les liens partagés
 section#links
   ul
     - @links.each do |link|
       li
         = render link
-section#sidebar
-  p.lead= t('.participate')
-  = link_to new_link_path, class: 'btn btn-large' do
-    i.icon-external-link
-    span.divider
-    = t('.new_link')
-  p.lead
-    small= t('.not_registered')
-  = link_to t('.create_account'), new_user_registration_path, class: 'btn btn-primary'
 
 = render 'shared/comment_count'
