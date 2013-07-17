@@ -7,10 +7,12 @@ head
 
 body
   = render 'nav'
-  .container
-    .row-fluid
-      .span12
+  #content
+    .container
+      .row-fluid
         = render partial: 'flash_messages', flash: flash
-  = yield
+    section#top
+      = yield(:top)
+    = yield
   footer
     = render 'footer'

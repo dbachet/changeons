@@ -2,8 +2,11 @@
 
 body {
   color: white;
-  background-color: $background-color;
-  background-image: url(<%= asset_path 'transparent-background.png' %>);
+  #content {
+    background-color: $background-color;
+    background-image: url(<%= asset_path 'transparent-background.png' %>);
+    padding-bottom: 40px;
+  }
 }
 
 a.custom-link{
@@ -43,11 +46,23 @@ h2 { font-weight: 200 }
   border: none;
 }
 
+section#top {
+  background: #FFF;
+  padding-top: 40px;
+  box-shadow: inset 0px -20px 16px -20px #000;
+  p {
+    color: #555;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 1em;
+    text-align: justify;
+  }
+}
+
 footer {
   box-shadow: inset 0 20px 20px -20px black;
   background-color: $white-color;
   height: 80px;
-  margin-top: 50px;
   font-weight: 200;
   vertical-align: bottom;
   color: $background-color;
