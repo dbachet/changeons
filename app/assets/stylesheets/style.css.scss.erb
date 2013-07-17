@@ -7,7 +7,7 @@ body {
 }
 
 a.custom-link{
-  color: $white-color;
+  color: $background-color;
   &:hover {
     text-decoration: none;
     color: $custom-link-color;
@@ -23,18 +23,24 @@ h2 { font-weight: 200 }
   @include rounded(0);
 }
 
-.navbar .container {
-  max-width: 940px;
-  .brand {
-    font-family: 'Pacifico', cursive;
-    color: $background-color;
+.navbar {
+  margin-bottom: 0;
+  .container {
+    max-width: 940px;
+    .brand {
+      font-family: 'Pacifico', cursive;
+      color: $background-color;
+      padding: 6px 20px 10px;
+    }
   }
 }
 
-.navbar-inner { @include rounded(0) }
-
-.span12.main {
-  .content { padding: 1em }
+.navbar-inner {
+  @include rounded(0);
+  @include remove-box-shadow;
+  background-color: $white-color;
+  background-image: none;
+  border: none;
 }
 
 footer {
