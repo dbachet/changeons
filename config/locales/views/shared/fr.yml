@@ -3,3 +3,18 @@ fr:
     comments:
       category:
         link_id: 2408371
+    home_top:
+      intro: Rassemblons ensemble l'information.
+      change: Et changeons.
+      have_more_respect: "Vous aimeriez avoir un mode de vie plus respectueux de la nature, mais vous ne savez pas comment ?"
+      want_to_act: "Vous avez envie d'agir, mais vous ne savez pas par où commencer ?"
+      we_share_information: "Ici, nous allons essayer de partager les informations pour que nos choix deviennent plus claires !"
+    participate:
+      to_share: "Pour partager un lien (page web, URL) en rapport avec"
+      ecology: "L'écologie"
+      sustainable_development: "Le développement durable"
+      renewable_energy: "Les énergies renouvelables"
+      environment: "L'environement"
+      click_button_below: "Cliquez sur le bouton ci-dessous !"
+      share_link: "Partager un lien"
+      not_yet_registered: "Vous n'êtes pas encore inscrit ?"

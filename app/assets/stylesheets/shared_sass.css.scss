@@ -4,16 +4,21 @@
   border-radius: $radius;
 }
 
-@mixin remove-box-shadow {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
+@mixin box-shadowed($params) {
+  -moz-box-shadow: $params;
+  -webkit-box-shadow: $params;
+  box-shadow: $params;
 }
 
-$white-color: #fff;
-$darken-white-color: darken($white-color, 10%);
+$white: #fff;
+$green: #34AB00;
+
+$bright-on-dark: $white;
+$bright-on-bright: $green;
+$darken-white-color: darken($bright-on-dark, 10%);
 $lighten-black-color: rgba(0,0,0,0.4);
-$background-color: #34AB00;
-$darken-background-color: darken($background-color, 4%);
-$lighten-background-color: lighten($background-color, 3%);
-$custom-link-color: #555;
+$darken-background-color: darken($bright-on-bright, 4%);
+$much-darken-background-color: darken($bright-on-bright, 15%);
+$lighten-background-color: lighten($bright-on-bright, 3%);
+$dark-on-dark: #333;
+$dark-on-bright: #555;

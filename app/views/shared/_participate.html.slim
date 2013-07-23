@@ -1,0 +1,27 @@
+h1= '// Participez !'
+p.lead
+  = t('.to_share')
+  span.important
+    span.icon
+      i.icon-leaf
+    = t('.ecology')
+  span.important
+    span.icon
+      i.icon-group
+    = t('.sustainable_development')
+  span.important
+    span.icon
+      i.icon-cloud
+    = t('.renewable_energy')
+  span.important
+    span.icon
+      i.icon-globe
+    = t('.environment')
+p.lead= t('.click_button_below')
+
+.share-link-button= link_to(new_link_path, class: 'circle') do
+  span= t('.share_link')
+p.create-account
+  = t('.not_yet_registered')
+  br
+  = link_to('Créer un compte', new_user_registration_path, class: 'custom-link')

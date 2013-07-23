@@ -1,31 +1,17 @@
 - content_for(:top) do
-  .container
-    .row
-      .slogan
-        b= "#{t('.intro')} "
-        small= t('.change')
-    .row
-      .span4
-        p
-          i.icon-leaf
-          |  Vous aimeriez avoir un mode de vie plus respectueux de la nature, mais vous ne savez pas comment ?
-      .span4
-        p
-          i.icon-lightbulb
-          |  Vous avez envie d'agir, mais vous ne savez pas par où commencer ?
-      .span4
-        p
-          i.icon-group
-          |  Ici, nous allons essayer de partager les informations pour que les réponses deviennent plus claires !
+  = render 'shared/home_top'
 
 .container
   .row
-    .span8
+    .span7
       section#links
         h1= '// Liens partagés'
         ul
           - @links.each do |link|
             li
               = render link
+    .span5
+      section#sidebar
+        = render 'shared/participate'
 
       = render 'shared/comment_count'
