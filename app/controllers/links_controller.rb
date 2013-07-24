@@ -2,6 +2,7 @@ class LinksController < ApplicationController
   before_filter :authenticate_user!, except: [:show, :index]
   before_action :set_link, only: [:show, :edit, :update, :destroy]
   authorize_resource
+  layout 'fancybox', only: :new
 
   # GET /links
   # GET /links.json
