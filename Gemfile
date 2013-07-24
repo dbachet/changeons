@@ -2,13 +2,14 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0.rc2'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git', branch: 'v3.0.0.rc'
 gem 'cancan'
 gem 'rolify'
 gem 'rails-i18n'
+gem 'fancybox2-rails', '~> 0.2.4'
 
 # Env var config
 gem 'figaro'
