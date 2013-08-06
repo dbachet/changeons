@@ -13,6 +13,7 @@ class Ability
         can [:update, :destroy], Link, user_id: user.id
       else
         can :read, Link
+        can :show, Category
       end
     #
     # The first argument to `can` is the action you are giving the user

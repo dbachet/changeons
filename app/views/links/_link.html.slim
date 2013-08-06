@@ -2,8 +2,8 @@ a.left href=links_path title=t('.links')
   i.icon-external-link
 .right
   h2
-    .label style="background-color: #{link.category.color}"
-      = link.category.name
+    .label.category style="background-color: #{link.category.color}"
+      = link_to link.category.name, show_category_path(link.category)
     span.link= link_to(link.name, link.url, class: 'custom-link')
     small= "(#{link.language.downcase})"
   aside

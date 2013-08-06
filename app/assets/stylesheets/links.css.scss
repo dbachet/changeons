@@ -29,7 +29,9 @@
       font-weight: 200;
       margin-bottom: 0;
       margin-top: 0;
-      .label { vertical-align: middle }
+      .label {
+        vertical-align: middle;
+      }
       .link {
         vertical-align: middle;
         padding: 0 5px 0 10px;
@@ -69,6 +71,11 @@ section#links {
     padding: 0 45px 22px 25px;
     font-weight: 100;
     font-size: 41px;
+  }
+  span.category{
+    margin-left: 20px;
+    font-weight: 100;
+    font-size: 13px;
   }
   ul {
     background-color: $bright-on-dark;

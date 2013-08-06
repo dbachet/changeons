@@ -1,0 +1,27 @@
+@import 'shared_sass.css.scss';
+
+#categories {
+  h1 { margin-top: 40px }
+  ul {
+    padding: 0 40px;
+    line-height: 1.8;
+    li {
+      list-style: none;
+      display: inline;
+      padding-right: 5px;
+    }
+  }
+}
+
+.label.category {
+  margin-left: 5px;
+  a {
+    color: $bright-on-dark;
+    text-decoration: none;
+    i {
+      margin: 0 1px 0 5px;
+      padding-left: 5px;
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}

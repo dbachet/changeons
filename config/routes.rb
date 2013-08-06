@@ -5,6 +5,7 @@ Changeons::Application.routes.draw do
     resources :categories, except: :show
   end
   resources :links
+  get 'categories/:id' => 'categories#show', as: :show_category
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
