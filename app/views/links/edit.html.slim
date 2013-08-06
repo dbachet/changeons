@@ -1,2 +1,6 @@
-.content
-  = render 'form'
+- content_for(:top) do
+  = render 'shared/home_top'
+
+.container
+  .row
+    = render 'form'
