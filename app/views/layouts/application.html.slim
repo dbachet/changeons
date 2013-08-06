@@ -9,8 +9,9 @@ body
   = render 'nav'
   #content
     section#top
-      .row-fluid
-        = render partial: 'flash_messages', flash: flash
+      .container
+        .row
+          = render partial: 'flash_messages', flash: flash
       = yield(:top)
     = yield
   footer
