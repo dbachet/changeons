@@ -3,6 +3,7 @@
   parent.$.fancybox.update()
   initCloseFancybox()
 <% else %>
+  parent.$("#flashes").html("<%= escape_javascript(render partial: 'flash_messages', locals: {flash: flash}) %>")
   list = parent.$('section#links').find('ul')
   list.prepend("<li><%= escape_javascript(render partial: 'links/link', locals: { link: @link }) %></li>")
   parent.$('body').find('#content').append("<%= escape_javascript(render partial: 'shared/comment_count') %>")

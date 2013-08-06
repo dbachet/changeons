@@ -30,13 +30,17 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = current_user.links.new(link_params)
-    @link.save
+    if @link.save
+      flash.now[:notice] = t('.success')
+    end
   end
 
   # PATCH/PUT /links/1
   # PATCH/PUT /links/1.json
   def update
-    @link.update(link_params)
+    if @link.update(link_params)
+      flash.now[:notice] = t('.success')
+    end
   end
 
   # DELETE /links/1

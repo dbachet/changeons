@@ -11,7 +11,8 @@ body
     section#top
       .container
         .row
-          = render partial: 'flash_messages', flash: flash
+          #flashes
+            = render partial: 'flash_messages', flash: flash
       = yield(:top)
     = yield
   footer
