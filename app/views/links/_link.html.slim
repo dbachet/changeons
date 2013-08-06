@@ -17,7 +17,7 @@ a.left href=links_path title=t('.links')
         = " - "
         = link_to t('.delete_link'), link, method: :delete, data: { confirm: t('.confirm_link_deletion') }, class: 'custom-link'
 
-- if action_name == 'show'
+- if action_name == 'show' && controller_name == 'links'
   p.url
     strong= t('.url')
     span= link_to link.url, class: 'custom-link'

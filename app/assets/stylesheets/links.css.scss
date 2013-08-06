@@ -59,6 +59,7 @@
   }
 }
 
+section#link,
 section#links {
   padding: 0;
   margin-top: 80px;
@@ -84,4 +85,7 @@ section#links {
   }
 }
 
-section#link { @include link }
+section#link {
+  margin: 40px 0;
+  @include link
+}
