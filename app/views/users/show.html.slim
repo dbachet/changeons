@@ -1,11 +1,22 @@
-.intro
-  b Mes liens partagés
-section#links
-  - if @links.present?
-    ul
-      - @links.each do |link|
-        li
-          = render link
-  - else
-    = t('.no_link')
-= render 'shared/comment_count'
+- content_for(:top) do
+  .container
+    .row
+      .slogan
+        b= "#{t('.see_your_shared_links')} "
+
+.container
+  .row
+    .span7
+      section#links
+        h1= '// Mes liens partagés'
+        - if @links.present?
+          ul
+            - @links.each do |link|
+              li
+                = render link
+        - else
+          = t('.no_link')
+    .span5
+      section#sidebar
+        = render 'shared/participate'
+    = render 'shared/comment_count'

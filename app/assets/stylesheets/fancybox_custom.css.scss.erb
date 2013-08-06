@@ -1,0 +1,19 @@
+@import 'shared_sass.css.scss';
+
+body.fancybox-content {
+  form {
+    padding-top: 40px;
+    margin: 0;
+    .form-actions { margin-bottom: 0 }
+    textarea {
+      border: 0;
+      @include box-shadowed(0);
+      @include rounded(0);
+    }
+  }
+  background-color: $bright-on-bright;
+  background-image: url(<%= asset_path 'transparent-background.png' %>);
+  .container {
+    width: 100%;
+  }
+}

@@ -2,13 +2,15 @@ source 'https://rubygems.org'
 ruby "2.0.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0.rc2'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git', branch: 'v3.0.0.rc'
 gem 'cancan'
 gem 'rolify'
 gem 'rails-i18n'
+gem 'fancybox2-rails', '~> 0.2.4'
+
 
 # Env var config
 gem 'figaro'
@@ -30,13 +32,14 @@ gem 'rails_bootstrap_navbar'
 # in production environments by default.
 group :assets do
   gem 'sass-rails', git: 'https://github.com/rails/sass-rails.git', branch: 'master'
-  gem 'coffee-rails', '~> 4.0.0.rc1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+gem 'coffee-rails', '~> 4.0.0.rc1'
 
 group :production, :staging, :development do
   gem 'unicorn'

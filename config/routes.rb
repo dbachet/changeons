@@ -1,10 +1,11 @@
 Changeons::Application.routes.draw do
-  devise_for :users, :controllers => { :registrations => "users/registrations" }
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   scope '/admin' do
     resources :users
     resources :categories, except: :show
   end
   resources :links
+  get 'categories/:id' => 'categories#show', as: :show_category
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
