@@ -1,5 +1,5 @@
 Changeons::Application.routes.draw do
-  devise_for :users, :controllers => { :registrations => "users/registrations" }
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   scope '/admin' do
     resources :users
     resources :categories, except: :show

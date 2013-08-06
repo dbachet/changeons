@@ -10,11 +10,10 @@ fr:
       want_to_act: "Vous avez envie d'agir, mais vous ne savez pas par où commencer ?"
       we_share_information: "Ici, nous allons essayer de partager les informations pour que nos choix deviennent plus claires !"
     participate:
-      to_share: "Pour partager un lien (page web, URL) en rapport avec"
+      to_share: "Cliquez sur le bouton ci-dessous pour partager un lien (page web, URL) en rapport avec:"
       ecology: "L'écologie"
       sustainable_development: "Le développement durable"
       renewable_energy: "Les énergies renouvelables"
       environment: "L'environement"
-      click_button_below: "Cliquez sur le bouton ci-dessous !"
       share_link: "Partager un lien"
       not_yet_registered: "Vous n'êtes pas encore inscrit ?"

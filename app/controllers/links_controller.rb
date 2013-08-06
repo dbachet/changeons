@@ -8,6 +8,7 @@ class LinksController < ApplicationController
   # GET /links.json
   def index
     @links = Link.eager_load(:category, :user).order(created_at: :desc).all
+    @categories = Category.order(name: :asc).all
   end
 
   # GET /links/1
@@ -31,11 +32,9 @@ class LinksController < ApplicationController
 
     respond_to do |format|
       if @link.save
-        format.html { redirect_to @link, notice: t('.success') }
-        format.json { render action: 'show', status: :created, location: @link }
+        format.js
       else
-        format.html { render action: 'new' }
-        format.json { render json: @link.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end

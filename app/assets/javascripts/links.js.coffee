@@ -7,6 +7,12 @@ jQuery ->
     padding: 0,
     closeBtn: false
 
+  initCloseFancybox()
+
+window.initCloseFancybox = initCloseFancybox = ->
   $('.close-fancybox').click (e) ->
     e.preventDefault()
-    parent.$.fancybox.close(true)
+    closeFancybox()
+
+window.closeFancybox = closeFancybox = ->
+  parent.$.fancybox.close(true)
