@@ -5,14 +5,5 @@ head
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
 
-body
-  = render 'nav'
-  #content
-    section#top
-      .container
-        .row
-          = render partial: 'flash_messages', flash: flash
-      = yield(:top)
-    = yield
-  footer
-    = render 'footer'
+body.fancybox-content
+  = yield

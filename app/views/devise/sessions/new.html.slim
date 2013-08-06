@@ -1,11 +1,12 @@
-.content
-  = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal'}) do |f|
-    legend= t('.sign_in')
-    = f.input :email, autofocus: true, input_html: {class: 'input-xxlarge'}
-    = f.input :password, input_html: {class: 'input-xxlarge'}
-    = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
-    .form-actions
-      = f.button :submit, t('.submit'), class: 'btn-primary'
-      br
-      br
-      = render "devise/shared/links"
+.container
+  .row
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'form-horizontal'}) do |f|
+      legend= t('.sign_in')
+      = f.input :email, autofocus: true, input_html: {class: 'input-xxlarge'}
+      = f.input :password, input_html: {class: 'input-xxlarge'}
+      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+      .form-actions
+        = f.button :submit, t('.submit'), class: 'btn-primary'
+        br
+        br
+        = render "devise/shared/links"

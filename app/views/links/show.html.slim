@@ -1,6 +1,14 @@
-.content
-  section#link
-    = render @link
+- content_for(:top) do
+  = render 'shared/home_top'
 
-  = render 'shared/comments'
-  = render 'shared/comment_count'
+.container
+  .row
+    .span7
+      section#link
+        ul
+          li
+            = render @link
+
+  .row
+    = render 'shared/comments'
+    = render 'shared/comment_count'

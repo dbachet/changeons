@@ -61,7 +61,7 @@ fr:
         create_account: Créer un compte
         submit: Créer le compte
       edit:
-        edit_user: Édition d'un utilisateur
+        edit_my_profile: Modification de mon profil
         waiting_confirmation: Actuellement en attente de la confirmation par email.
         leave_it_blank: Laisser le champs vide si vous ne voulez pas le changer.
         need_current_password: Nous avons besoin de votre mot de passe actuel pour confirmer les modifications.

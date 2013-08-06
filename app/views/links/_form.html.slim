@@ -1,8 +1,7 @@
-.alert.alert-block style='font-weight: 200;'
-  i.icon-warning-sign style='margin-right: 5px;'
-  span style='' Les administrateurs de Changeons se réservent le droit de ne pas publier votre lien s'il ne contient pas d'information concernant l'environnement ou l'écologie
-= simple_form_for(@link, html: {class: 'form-horizontal'}) do |f|
-  legend= t('.title')
+= simple_form_for(@link, html: {class: 'form-horizontal', remote: true}) do |f|
+  .alert.alert-block style='font-weight: 200;'
+    i.icon-warning-sign style='margin-right: 5px;'
+    span style='' Les administrateurs de Changeons se réservent le droit de ne pas publier votre lien s'il ne contient pas d'information concernant l'environnement ou l'écologie
   = f.error_notification
   = f.input :name, input_html: {class: 'input-xxlarge'}
   = f.input :url, input_html: {class: 'input-xxlarge'}
@@ -10,4 +9,4 @@
   = f.association :category, label: t('.category'), include_blank: false
   .form-actions
     = f.button :submit, t('.submit'), class: 'btn-primary'
-    span style="margin-left: 10px" = link_to t('.back'), links_path, class: 'btn btn-danger'
+    span style="margin-left: 10px" = link_to t('.back'), '#', class: 'btn btn-danger close-fancybox'
