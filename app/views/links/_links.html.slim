@@ -15,7 +15,7 @@
                 = link_to("<i class='icon-remove'></i>".html_safe, root_path)
         ul
           - @links.each do |link|
-            li
+            li id="link-#{link.id}"
               = render link
     .span5
       section#sidebar

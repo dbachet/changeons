@@ -2,7 +2,8 @@ class LinksController < ApplicationController
   before_filter :authenticate_user!, except: [:show, :index]
   before_action :set_link, only: [:show, :edit, :update, :destroy]
   authorize_resource
-  layout 'fancybox', only: :new
+  layout 'fancybox', only: [:new, :edit]
+  respond_to :js, only: [:create, :update]
 
   # GET /links
   # GET /links.json
@@ -29,28 +30,13 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = current_user.links.new(link_params)
-
-    respond_to do |format|
-      if @link.save
-        format.js
-      else
-        format.js
-      end
-    end
+    @link.save
   end
 
   # PATCH/PUT /links/1
   # PATCH/PUT /links/1.json
   def update
-    respond_to do |format|
-      if @link.update(link_params)
-        format.html { redirect_to @link, notice: t('.success') }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @link.errors, status: :unprocessable_entity }
-      end
-    end
+    @link.update(link_params)
   end
 
   # DELETE /links/1

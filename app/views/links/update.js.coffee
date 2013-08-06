@@ -3,10 +3,9 @@
   parent.$.fancybox.update()
   initCloseFancybox()
 <% else %>
-  list = parent.$('section#links').find('ul')
-  list.prepend("<li><%= escape_javascript(render partial: 'links/link', locals: { link: @link }) %></li>")
+  link = parent.$('section#links').find('ul').find('li#link-<%= @link.id %>')
+  link.html("<%= escape_javascript(render partial: 'links/link', locals: { link: @link }) %>").slideUp()
   parent.$('body').find('#content').append("<%= escape_javascript(render partial: 'shared/comment_count') %>")
-  list.find('li:first-child').hide()
-  list.find('li:first-child').delay(800).slideDown(400)
+  link.delay(800).slideDown(400)
   closeFancybox()
 <% end %>

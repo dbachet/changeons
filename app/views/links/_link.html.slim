@@ -13,7 +13,7 @@ a.left href=links_path title=t('.links')
       = link_to content_tag(:i, '', class: 'icon-comments'), link_url(link),  class: 'custom-link'
     - if can?(:update, link) && can?(:destroy, link)
       .admin
-        = link_to t('.edit_link'), edit_link_path(link), class: 'custom-link'
+        = link_to t('.edit_link'), edit_link_path(link), class: 'custom-link fancybox', 'data-fancybox-type' => 'iframe'
         = " - "
         = link_to t('.delete_link'), link, method: :delete, data: { confirm: t('.confirm_link_deletion') }, class: 'custom-link'
 
