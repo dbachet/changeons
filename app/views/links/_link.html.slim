@@ -4,7 +4,7 @@ a.left href=links_path title=t('.links')
   h2
     .label.category style="background-color: #{link.category.color}"
       = link_to link.category.name, show_category_path(link.category)
-    span.link= link_to(link.name, link.url, class: 'custom-link')
+    span.link= link_to(link.name, link.url, class: 'custom-link', target: 'blank')
     small= "(#{link.language.downcase})"
   aside
     span.shared-by= t('.shared_by', by: link.user.name, time: distance_of_time_in_words_to_now(link.created_at))
