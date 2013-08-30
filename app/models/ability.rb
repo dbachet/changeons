@@ -11,6 +11,7 @@ class Ability
         can :show, User, id: user.id
         can [:read, :create], Link
         can [:update, :destroy], Link, user_id: user.id
+        can :show, Category
       else
         can :read, Link
         can :show, Category

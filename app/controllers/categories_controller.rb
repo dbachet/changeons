@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!, except: :show
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   authorize_resource
 
