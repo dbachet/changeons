@@ -2,9 +2,11 @@
 
 body {
   color: white;
+  min-height: 1200px;
   #content {
-    background-color: $bright-on-bright;
-    background-image: url(<%= asset_path 'transparent-background.png' %>);
+    background: url(<%= asset_path 'transparent-background.png' %>),
+                url(<%= asset_path 'eolienne_white.png' %>) no-repeat top,
+                $bright-on-bright;
     padding-bottom: 40px;
   }
 }
@@ -49,7 +51,8 @@ h2 { font-weight: 200 }
 }
 
 section#top {
-  background: $white;
+  background: url(<%= asset_path 'eolienne_green.png' %>) no-repeat top,
+              $white;
   padding-top: 40px;
   padding-bottom: 40px;
   color: $dark-on-bright;
@@ -94,6 +97,7 @@ section#sidebar {
     font-weight: 100;
     font-size: 41px;
     text-align: center;
+    text-shadow: 0 1px 1px #000;
   }
   p {
     color: $dark-on-dark;
