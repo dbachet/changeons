@@ -20,7 +20,6 @@ gem 'postageapp', git: 'git://github.com/postageapp/postageapp-ruby.git', branch
 
 # Template
 gem 'slim'
-gem 'bootstrap-sass', git: 'git://github.com/thomas-mcdonald/bootstrap-sass.git', branch: '3'
 
 # icons library
 gem 'font-awesome-rails'
@@ -31,12 +30,18 @@ gem 'rails_bootstrap_navbar'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', '>= 3.2'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'uglifier'
+  gem 'therubyracer'
+  gem 'less-rails'
+  gem 'twitter-bootstrap-rails'
+  gem 'bootstrap-sass'
+  gem 'ember-rails'
+  gem 'ember-source', '1.5.0.beta.1.1'
+  gem 'ember-data-source', '1.0.0.beta.6'
+  gem 'emblem-rails'
+  gem 'font-awesome-sass'
+  gem 'chosen-rails'
 end
 
 gem 'coffee-rails', '~> 4.0.0.rc1'
