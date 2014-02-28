@@ -20,7 +20,7 @@ gem 'postageapp', git: 'git://github.com/postageapp/postageapp-ruby.git', branch
 
 # Template
 gem 'slim'
-gem 'bootstrap-sass', '2.3.1.0'
+gem 'bootstrap-sass', git: 'git://github.com/thomas-mcdonald/bootstrap-sass.git', branch: '3'
 
 # icons library
 gem 'font-awesome-rails'
@@ -31,7 +31,7 @@ gem 'rails_bootstrap_navbar'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', git: 'https://github.com/rails/sass-rails.git', branch: 'master'
+  gem 'sass-rails', '>= 3.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
