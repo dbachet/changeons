@@ -78,4 +78,6 @@ Changeons::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.ember.variant = :production if config.respond_to?(:ember)
 end

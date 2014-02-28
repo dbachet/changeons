@@ -29,5 +29,7 @@ module Changeons
 
     # From the bootstrap-saas gem
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
+    config.handlebars.templates_root = 'ember/templates' if config.respond_to?(:handlebars)
   end
 end
