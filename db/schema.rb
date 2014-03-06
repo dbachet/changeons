@@ -11,13 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130501201500) do
+ActiveRecord::Schema.define(version: 20130519101019) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "color"
+  end
 
   create_table "links", force: true do |t|
     t.text     "name"
     t.text     "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "language"
+    t.integer  "category_id"
   end
 
   create_table "roles", force: true do |t|
@@ -44,6 +54,7 @@ ActiveRecord::Schema.define(version: 20130501201500) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

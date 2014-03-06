@@ -1,5 +1,5 @@
 # For more information see: http://emberjs.com/guides/routing/
 
-Changeons.Router.map ()->
+Ch.Router.map ()->
   # @resource('posts')
 
