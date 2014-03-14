@@ -20,7 +20,7 @@
     }
   }
   .right {
-    width: 94%;
+    width: 100%;
     display: inline-block;
     vertical-align: middle;
     h2 {
@@ -31,6 +31,7 @@
       margin-top: 0;
       .label {
         vertical-align: middle;
+        background-color: orange;
       }
       .link {
         vertical-align: middle;
@@ -50,7 +51,6 @@
         &:hover { color: $dark-on-dark};
       }
       .comment-count {
-        float: right;
         i { margin: 0 5px 0 10px }
       }
     }
@@ -81,10 +81,11 @@ section#links {
   ul {
     background-color: $bright-on-dark;
     margin: 0;
+    padding: 0;
     color: $bright-on-bright;
     @include box-shadowed(0px 0px 20px -2px #000);
     li {
-      padding: 25px 1em 35px 20px;
+      padding: 25px 1em 25px 20px;
       list-style: none;
       border-top: 1px solid rgba(0, 0, 0, 0.1);
       &:first-child { border-top: none }

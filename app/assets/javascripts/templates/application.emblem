@@ -1,2 +1,5 @@
-.container
+#content
+  section#top
+    #flash.container
   outlet
+footer

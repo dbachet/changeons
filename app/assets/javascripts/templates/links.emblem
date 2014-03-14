@@ -1,6 +1,23 @@
-ul
-  each link in model
-    li
-      = link.name
-      '  -
-      = link.url
+.container
+  .row
+    .col-md-5
+      section#links
+        h1
+          | Liens partagés
+        ul
+          each link in model
+            li
+              .right
+                h2
+                  .label.category
+                    | category
+                  span.link
+                    a.custom-link href=link.url target='blank'
+                      = link.name
+                  small
+                    | (en)
+                aside
+                  span.shared-by shared by Damien
+                  span.comment-count.pull-right
+                    i.glyphicon.glyphicon-comment
+                    | 12 comments
