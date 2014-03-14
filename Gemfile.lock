@@ -259,6 +259,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers
   bootstrap-sass
   cancan
   capybara

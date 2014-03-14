@@ -1,2 +1,1 @@
-Ch.ApplicationController = Ember.Controller.extend
-  yes: 'WUUUUUU'
+Ch.ApplicationController = Ember.Controller.extend()

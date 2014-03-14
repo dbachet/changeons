@@ -1,0 +1,1 @@
+Ch.LinksController = Ember.ArrayController.extend()

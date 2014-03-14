@@ -1,0 +1,6 @@
+ul
+  each link in model
+    li
+      = link.name
+      '  -
+      = link.url

@@ -45,6 +45,7 @@ group :assets do
 end
 
 gem 'coffee-rails'
+gem 'active_model_serializers'
 
 group :production, :staging, :development do
   gem 'unicorn'
