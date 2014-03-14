@@ -1,0 +1,6 @@
+ul
+  each user in model
+    li
+      = user.name
+      '  -
+      = user.email

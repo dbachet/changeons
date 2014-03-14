@@ -5,3 +5,5 @@ Ch.Router.map ()->
     @route 'categories'
 
   @resource('categories')
+
+  @resource('users')

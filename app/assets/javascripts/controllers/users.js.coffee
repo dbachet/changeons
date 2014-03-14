@@ -1,0 +1,1 @@
+Ch.UsersController = Ember.ArrayController.extend()
