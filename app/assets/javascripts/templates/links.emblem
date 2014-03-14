@@ -17,7 +17,10 @@
                   small
                     | (en)
                 aside
-                  span.shared-by shared by Damien
+                  span.shared-by
+                    | shared by
+                    '
+                    = link.user.name
                   span.comment-count.pull-right
                     i.glyphicon.glyphicon-comment
                     | 12 comments

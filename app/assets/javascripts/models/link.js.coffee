@@ -3,3 +3,4 @@ Ch.Link = DS.Model.extend
   url: DS.attr 'string'
 
   category: DS.belongsTo 'category'
+  user: DS.belongsTo 'user'
