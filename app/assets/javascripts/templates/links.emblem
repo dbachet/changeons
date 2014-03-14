@@ -10,7 +10,7 @@
               .right
                 h2
                   .label.category
-                    | category
+                    = link.category.name
                   span.link
                     a.custom-link href=link.url target='blank'
                       = link.name

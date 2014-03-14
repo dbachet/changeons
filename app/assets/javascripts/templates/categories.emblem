@@ -1,0 +1,6 @@
+ul
+  each category in model
+    li
+      = category.name
+      '  -
+      = category.color
