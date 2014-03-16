@@ -1,0 +1,1 @@
+Ch.AuthenticatedRoute = Ember.Route.extend()

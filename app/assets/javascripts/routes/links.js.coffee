@@ -1,4 +1,4 @@
-Ch.LinksRoute = Ember.Route.extend
+Ch.LinksRoute = Ch.AuthenticatedRoute.extend
 
   model: ->
     @store.find('link')
