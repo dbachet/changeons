@@ -4,7 +4,7 @@ ruby "2.0.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0.rc1'
 
-gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
+gem 'devise'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git', branch: 'v3.0.0.rc'
 gem 'cancan'
 gem 'rolify'

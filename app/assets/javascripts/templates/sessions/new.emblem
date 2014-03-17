@@ -1,0 +1,13 @@
+form submit='login'
+  .row
+    .col-md-6
+      if hasErrors
+        .alert.alert-danger Errors
+
+      .form-group class=hasErrors:has-error
+        = input valueBinding='email' id='email' class='form-control' placeholder='Email' type='email'
+
+      .form-group class=hasErrors:has-error
+        = input valueBinding='password' id='password' class='form-control' type='password' placeholder='password'
+
+      button.btn.btn-default#btn-login Save

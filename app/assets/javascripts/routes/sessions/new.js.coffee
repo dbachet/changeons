@@ -1,0 +1,1 @@
+Ch.SessionsNewRoute = Ember.Route.extend()

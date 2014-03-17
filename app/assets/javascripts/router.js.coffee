@@ -7,3 +7,6 @@ Ch.Router.map ()->
   @resource('categories')
 
   @resource('users')
+
+  @resource 'sessions', ->
+    @route 'new'
