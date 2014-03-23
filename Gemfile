@@ -63,10 +63,16 @@ group :development do
   gem 'sqlite3'
 end
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'konacha'
+end
+
 group :test do
-  gem 'rspec-rails', '~> 2.0'
   gem 'capybara'
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'poltergeist'
+  gem 'thin'
 end
 
 group :staging, :production do
