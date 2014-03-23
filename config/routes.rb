@@ -12,8 +12,10 @@ Changeons::Application.routes.draw do
     resources :links
     resources :categories
     resources :users
-    resources :sessions do
-      post :create
+    resources :sessions, only: :create do
+      collection do
+        delete :destroy
+      end
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

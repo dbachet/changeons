@@ -4,6 +4,7 @@
       section#links
         h1
           | Liens partagés
+          button.btn.btn-default#btn-logout click='logout' Logout
         ul
           each link in model
             li

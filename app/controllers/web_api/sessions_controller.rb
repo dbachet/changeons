@@ -10,6 +10,11 @@ class WebApi::SessionsController < ApplicationController
     end
   end
 
+  def destroy
+    sign_out :user
+    render json: {}, status: :accepted
+  end
+
   private
 
   def create_params
