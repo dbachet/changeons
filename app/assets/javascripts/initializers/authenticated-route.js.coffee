@@ -6,4 +6,6 @@ Ch.AuthenticatedRoute = Ember.Route.extend
         url: '/web_api/sessions'
         async: false
         type: 'DELETE'
-      )
+      ).done =>
+        @controllerFor('currentUser').set('model', null)
+        @transitionTo('sessions.new')
