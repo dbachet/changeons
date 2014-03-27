@@ -1,5 +1,16 @@
 Ch.AuthenticatedRoute = Ember.Route.extend
 
+  beforeModel: (transition) ->
+    @authorize(transition)
+
+  authorize: (transition) ->
+    sessionController = @controllerFor('sessions.new')
+    currentUserController = @controllerFor('currentUser')
+
+    if !currentUserController.get('isSignedIn')
+      sessionController.set('attemptedTransition', transition)
+      @transitionTo('sessions.new')
+
   actions:
     logout: (user) ->
       $.ajax(

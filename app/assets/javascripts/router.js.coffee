@@ -6,6 +6,8 @@ Ch.Router.map ()->
 
   @resource('categories')
 
+  @resource 'currentUser', path: '/users/current'
+
   @resource('users')
 
   @resource 'sessions', ->

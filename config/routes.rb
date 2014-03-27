@@ -11,7 +11,11 @@ Changeons::Application.routes.draw do
   namespace 'web_api' do
     resources :links
     resources :categories
-    resources :users
+    resources :users do
+      collection do
+        get :current
+      end
+    end
     resources :sessions, only: :create do
       collection do
         delete :destroy

@@ -9,7 +9,7 @@ Ch.SessionsNewController = Ember.Controller.extend
 
   invalidatePassword: (->
     @set 'hasErrors', false
-  ).observes 'email', 'password'
+  ).observes('email', 'password')
 
   actions:
 
