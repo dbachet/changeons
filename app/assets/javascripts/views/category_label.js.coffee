@@ -1,6 +1,6 @@
-Ch.LinksCategoryView = Ember.View.extend
+Ch.CategoryLabelView = Ember.View.extend
 
-  tagName: 'li'
+  tagName: 'span'
 
   color: ''
 

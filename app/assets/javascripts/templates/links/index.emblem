@@ -7,8 +7,10 @@ section#links
       li
         .right
           h2
-            .label.category
-              = link.category.name
+            = view Ch.CategoryLabelView color=link.category.color
+              = linkTo 'category' link.category.id
+                .label.category style=view.categoryStyle
+                  = link.category.name
             span.link
               a.custom-link href=link.url target='blank'
                 = link.name

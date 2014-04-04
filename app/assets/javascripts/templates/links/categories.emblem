@@ -3,7 +3,8 @@ section#sidebar
     h1 Catégories
     ul
       each category in categories
-        = view Ch.LinksCategoryView color=category.color
-          = linkTo 'category' category.id
-            .label.category style=view.categoryStyle
-              = category.name
+        li
+          = view Ch.CategoryLabelView color=category.color
+            = linkTo 'category' category.id
+              .label.category style=view.categoryStyle
+                = category.name
