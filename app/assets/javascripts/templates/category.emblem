@@ -1,0 +1,7 @@
+.container
+  .row
+    .col-md-5
+      outlet 'links'
+    .col-md-2
+    .col-md-5
+      outlet 'categories'

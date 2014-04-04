@@ -4,5 +4,6 @@ section#sidebar
     ul
       each category in categories
         = view Ch.LinksCategoryView color=category.color
-          .label.category style=view.categoryStyle
-            = category.name
+          = linkTo 'category' category.id
+            .label.category style=view.categoryStyle
+              = category.name

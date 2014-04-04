@@ -20,6 +20,11 @@ describe 'links page', ->
             id: 1,
             name: 'Test category',
             color: '#333'
+          },
+          {
+            id: 2,
+            name: 'Second test category',
+            color: '#999'
           }
         ]
       links:
@@ -29,6 +34,13 @@ describe 'links page', ->
             url: 'www.test.com',
             name: 'This is a testing link',
             category_id: 1,
+            user_id: 1
+          },
+          {
+            id: 234,
+            url: 'www.yeah.com',
+            name: 'This is a YEAH link',
+            category_id: 2,
             user_id: 1
           }
         ]
@@ -42,6 +54,11 @@ describe 'links page', ->
             id: 1,
             name: 'Test category',
             color: '#333'
+          },
+          {
+            id: 2,
+            name: 'Second test category',
+            color: '#999'
           }
         ]
 
@@ -59,4 +76,8 @@ describe 'links page', ->
 
     it 'has category label with right text', ->
       expect($('section#sidebar #categories ul li:first .label.category').text()).to.eql('Test category')
+
+    # it 'click on category should redirect to links filtered by category', ->
+    #   click()
+
 

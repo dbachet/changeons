@@ -6,6 +6,10 @@ Ch.Router.map ()->
 
   @resource('categories')
 
+  @resource 'category', path: '/categories/:category_id', ->
+    @route 'links'
+    @route 'categories'
+
   @resource 'currentUser', path: '/users/current'
 
   @resource('users')
