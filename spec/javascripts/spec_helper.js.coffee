@@ -37,6 +37,14 @@ beforeEach ->
   window.server = testHelper.fakeServer()
   window.server.autoRespond = true
 
+  # currentUserResponse = JSON.stringify
+  #   user:
+  #     id: 1
+  #     name: 'Test User'
+  #     email: 'test@test.com'
+
+  server.respondWith('GET', '/web_api/users/current', [200, {"Content-Type":"application/json"}, ''])
+
 afterEach ->
   Ch.reset()
   window.server.restore()

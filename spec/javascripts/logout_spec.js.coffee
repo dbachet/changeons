@@ -19,7 +19,7 @@ describe 'Logout', ->
 
     visit('/links')
 
-  it 'should empty currentUser and redirect to login page', ->
+  it 'should empty currentUser', ->
     click('button')
 
     andThen ->

@@ -9,7 +9,6 @@ Ch.AuthenticatedRoute = Ember.Route.extend
 
     if !currentUserController.get('isSignedIn')
       sessionController.set('attemptedTransition', transition)
-      @transitionTo('sessions.new')
 
   actions:
     logout: (user) ->
@@ -19,4 +18,4 @@ Ch.AuthenticatedRoute = Ember.Route.extend
         type: 'DELETE'
       ).done =>
         @controllerFor('currentUser').set('model', null)
-        @transitionTo('sessions.new')
+        @transitionTo('links')
