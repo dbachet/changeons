@@ -1,0 +1,1 @@
+Ch.LinksCategoriesView = Ember.View.extend()
