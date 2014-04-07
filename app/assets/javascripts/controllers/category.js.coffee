@@ -1,0 +1,1 @@
+Ch.CategoryController = Ember.ObjectController.extend()
