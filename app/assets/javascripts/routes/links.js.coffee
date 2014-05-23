@@ -1,14 +1,16 @@
 Ch.LinksRoute = Ch.AuthenticatedRoute.extend
 
-  beforeModel: ->
-    @store.find('category').then (categories) =>
-      @controllerFor('LinksCategories').set('model', categories.toArray())
+  model: ->
+    @store.find('link')
 
   renderTemplate: ->
-    @_super()
+    @_super.apply(@, arguments)
 
-    @render('links/categories',
-      outlet: 'categories',
-      into: 'links',
-      controller: 'LinksCategories'
+    categoriesController = @controllerFor('categories')
+    categoriesController.set('model', @store.find('category'))
+
+    @render('sidebar',
+      outlet: 'sidebar',
+      into: 'application',
+      controller: categoriesController
     )

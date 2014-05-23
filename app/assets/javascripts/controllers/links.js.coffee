@@ -1,1 +1,3 @@
-Ch.LinksController = Ember.ArrayController.extend()
+Ch.LinksController = Ember.ArrayController.extend
+
+  needs: ['categories']

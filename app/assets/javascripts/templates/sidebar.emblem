@@ -1,0 +1,10 @@
+.col-md-5
+  section#sidebar
+    #categories
+      h1 Catégories
+      ul
+        each category in model
+          li
+            = view Ch.CategoryLabelView color=category.color
+              .label.category style=view.categoryStyle
+                = category.name

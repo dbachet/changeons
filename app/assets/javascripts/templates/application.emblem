@@ -1,5 +1,9 @@
 #content
   section#top
     #flash.container
-  outlet
+  .container
+    .row
+      outlet
+      outlet 'sidebar'
+
 footer
