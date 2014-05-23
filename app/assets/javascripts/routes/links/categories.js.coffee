@@ -1,1 +1,0 @@
-Ch.LinksCategoriesRoute = Ember.Route.extend()

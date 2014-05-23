@@ -1,4 +1,5 @@
 ul
+  | Categories
   each category in model
     li
       = category.name

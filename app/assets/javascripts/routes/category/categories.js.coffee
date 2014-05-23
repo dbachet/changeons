@@ -1,1 +1,0 @@
-Ch.CategoryCategoriesRoute = Ch.AuthenticatedRoute.extend()
