@@ -8,9 +8,8 @@
         li
           .right
             h2
-              = view Ch.CategoryLabelView color=link.category.color
-                .label.category style=view.categoryStyle
-                  = link.category.name
+              .label.category style=link.category.categoryInlineStyle
+                = link.category.name
               span.link
                 a.custom-link href=link.url target='blank'
                   = link.name

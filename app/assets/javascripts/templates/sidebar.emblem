@@ -5,6 +5,5 @@
       ul
         each category in model
           li
-            = view Ch.CategoryLabelView color=category.color
-              .label.category style=view.categoryStyle
-                = category.name
+            .label.category style=category.categoryInlineStyle
+              = category.name
