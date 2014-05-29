@@ -70,12 +70,12 @@ describe 'links page', ->
       expect($('section#links ul li:first span.link').text()).to.eql('This is a testing link')
 
     it 'has category element with the right text', ->
-      expect($('section#links ul li:first .category').text()).to.eql('Test category')
+      expect($('section#links ul li:first .label').text()).to.eql('Test category')
 
   context 'has categories section with category items', ->
 
     it 'has category label with right text', ->
-      expect($('section#sidebar #categories ul li:first .label.category').text()).to.eql('Test category')
+      expect($('section#sidebar #categories ul li:first .label').text()).to.eql('Test category')
 
     # it 'click on category should redirect to links filtered by category', ->
     #   click()
