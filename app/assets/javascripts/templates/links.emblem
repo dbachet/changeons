@@ -8,8 +8,7 @@
         li
           .right
             h2
-              .label.category style=link.category.categoryInlineStyle
-                = link.category.name
+              = colored-label model=link.category
               span.link
                 a.custom-link href=link.url target='blank'
                   = link.name

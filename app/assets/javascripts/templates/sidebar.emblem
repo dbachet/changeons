@@ -5,5 +5,4 @@
       ul
         each category in model
           li
-            .label.category style=category.categoryInlineStyle
-              = category.name
+            = colored-label model=category

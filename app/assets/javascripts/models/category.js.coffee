@@ -3,7 +3,3 @@ Ch.Category = DS.Model.extend
   color: DS.attr('string')
 
   links: DS.hasMany('link', async: true)
-
-  categoryInlineStyle: (->
-    "background-color: #{@get('color')}"
-  ).property('color')

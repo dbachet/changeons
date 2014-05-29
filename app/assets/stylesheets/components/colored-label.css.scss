@@ -1,0 +1,14 @@
+@import 'shared_sass.css.scss';
+
+.label {
+  font-weight: 100;
+  a {
+    color: $bright-on-dark;
+    text-decoration: none;
+    i {
+      margin: 0 1px 0 5px;
+      padding-left: 5px;
+      border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+}
