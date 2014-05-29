@@ -4,4 +4,4 @@ Ch.SessionsNewRoute = Ember.Route.extend
     currentUserController = @controllerFor('currentUser')
 
     if currentUserController.get('isSignedIn')
-      @transitionTo('links')
+      @transitionTo('application')
