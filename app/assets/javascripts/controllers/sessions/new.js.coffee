@@ -1,7 +1,5 @@
 Ch.SessionsNewController = Ember.Controller.extend
 
-  needs: ['currentUser']
-
   attemptedTransition: null
   hasErrors: false
   email: null
@@ -19,9 +17,11 @@ Ch.SessionsNewController = Ember.Controller.extend
       @set('hasErrors', false)
 
     login: ->
-      attemptedTransition   = @get('attemptedTransition')
-      currentUserController = @get('controllers.currentUser')
-      store = currentUserController.store
+      @currentUser.set('content', Ember.Object.create())
+
+      attemptedTransition = @get('attemptedTransition')
+
+      # currentUserController = @get('controllers.currentUser')
 
       $.ajax(
         url: '/web_api/sessions'
@@ -32,17 +32,30 @@ Ch.SessionsNewController = Ember.Controller.extend
             email: @get('email')
             password: @get('password')
 
-      ).done( (data) =>
-        user = store.push('user', store.serializerFor(Ch.User).normalize(Ch.User, data.session))
-        currentUserController.set('model', user)
+      ).done(Ember.run.bind(@, ((response) ->
+        user = @store.push('user', @store.serializerFor(Ch.User).normalize(Ch.User, response.session))
+        @currentUser.set('content', user)
         @send('clear')
 
-        if Em.isBlank(attemptedTransition) || (attemptedTransition.targetName == 'sessions.new')
-          @transitionToRoute('links')
-        else
-          attemptedTransition.retry()
-          @set('attemptedTransition', null)
 
-      ).fail (data) =>
+        if !Ember.isBlank(attemptedTransition)
+          attemptedTransition.retry()
+        else
+          @transitionToRoute('links')
+      ))).fail(Ember.run.bind(@, (() ->
         @set("hasErrors", true)
-        $('input#password').focus()
+      )))
+
+      #   user = store.push('user', store.serializerFor(Ch.User).normalize(Ch.User, data.session))
+      #   currentUserController.set('model', user)
+      #   @send('clear')
+
+      #   if Em.isBlank(attemptedTransition) || (attemptedTransition.targetName == 'sessions.new')
+      #     @transitionToRoute('links')
+      #   else
+      #     attemptedTransition.retry()
+      #     @set('attemptedTransition', null)
+
+      # ).fail (data) =>
+      #   @set("hasErrors", true)
+      #   $('input#password').focus()

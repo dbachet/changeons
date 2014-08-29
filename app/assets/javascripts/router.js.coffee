@@ -1,16 +1,10 @@
 # For more information see: http://emberjs.com/guides/routing/
 
 Ch.Router.map ()->
-  @resource('links', path: '/')
-
   @resource('categories')
-
-  # @resource 'category', path: '/categories/:category_id', ->
-  #   @route 'links'
-  #   @route 'categories'
-
-  @resource 'currentUser', path: '/users/current'
-
+  @resource 'secured', ->
+    @resource 'currentUser', path: '/users/current'
+  @resource('links', path: '/')
   @resource('users')
 
   @resource 'sessions', ->

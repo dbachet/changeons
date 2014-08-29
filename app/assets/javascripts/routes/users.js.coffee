@@ -1,4 +1,4 @@
-Ch.UsersRoute = Ch.AuthenticatedRoute.extend
+Ch.UsersRoute = Ember.Route.extend
 
   model: ->
     @store.find('user')

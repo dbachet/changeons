@@ -1,9 +1,16 @@
+#content
+  |User
+  = currentUser.name
+
 .row
   .container
     = link-to 'application' class='website-title'
       |Changeons
-    = link-to 'sessions.new' class='login-link custom-link'
-      |Se connecter
+    if currentUser.isSignedIn
+      button click='logout' logout
+    else
+      = link-to 'sessions.new' class='login-link custom-link'
+        |Se connecter
 #content
   section#top
     #flash.container
