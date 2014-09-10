@@ -1,1 +1,2 @@
-= model.name
+= link-to 'links' (query-params category=model.id)
+  = model.name

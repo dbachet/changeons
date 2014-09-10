@@ -1,6 +1,6 @@
 Ch.ColoredLabelComponent = Ember.Component.extend
 
-  attributeBindings: ["style"]
+  attributeBindings: ['style']
 
   tagName: 'span'
 
