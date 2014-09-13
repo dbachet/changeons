@@ -4,7 +4,7 @@
 
 .row
   .container
-    = link-to 'application' class='website-title'
+    = link-to 'application' (query-params category='') class='website-title'
       |Changeons
     if currentUser.isSignedIn
       button click='logout' logout
