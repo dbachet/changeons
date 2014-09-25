@@ -1,4 +1,4 @@
-.col-md-5
+.col-md-12
   section#links
     h1
       | Liens partagés
@@ -21,4 +21,3 @@
               span.comment-count.pull-right
                 i.glyphicon.glyphicon-comment
                 | 12 comments
-.col-md-2

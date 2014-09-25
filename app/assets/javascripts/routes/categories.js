@@ -5,8 +5,5 @@ Ch.CategoriesRoute = Ember.Route.extend({
       sessionController.set('attemptedTransition', transition);
       this.transitionTo('sessions.new');
     }
-  },
-  model: function() {
-    this.store.find('category');
   }
 });

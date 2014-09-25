@@ -3,7 +3,8 @@
 Ch.Router.map ()->
   @resource 'secured', ->
     @resource 'currentUser', path: '/users/current'
-  @resource('links', path: '/')
+  @resource 'links', path: '/', ->
+    @route 'new'
   @resource('users')
   @resource('categories')
 

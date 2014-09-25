@@ -1,0 +1,17 @@
+.col-md-12
+  section#links-new
+    h1
+      | Ajouter un nouveau lien
+
+    form submit='create'
+      .row
+        if hasErrors
+          .alert.alert-danger Errors
+
+        .form-group class=hasErrors:has-error
+          = input valueBinding='name' id='name' class='form-control' placeholder='Description' type='text'
+
+        .form-group class=hasErrors:has-error
+          = input valueBinding='url' id='url' class='form-control' type='text' placeholder='URL'
+
+        button.btn.btn-primary#btn-save-link Enregistrer le lien

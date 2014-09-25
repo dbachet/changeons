@@ -6,3 +6,4 @@
         each category in model
           li
             = colored-label model=category
+

@@ -16,7 +16,10 @@
     #flash.container
   .container
     .row
-      outlet
+      .col-md-5
+        outlet 'links-new'
+        outlet
+      .col-md-2
       outlet 'sidebar'
 
 footer
