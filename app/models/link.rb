@@ -7,6 +7,7 @@ class Link < ActiveRecord::Base
   validates :url, uniqueness: true, presence: true
   validates :language, presence: true, inclusion: { in: LANGUAGES }
   validates :category, presence: true
+  validates :user, presence: true
 
   def self.disqus_category_id
     ENV["DISQUS_LINK_ID"]

@@ -21,11 +21,11 @@
         </div>
 
         <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
-          {{select-input model=model attribute='category' content=categoryNames}}
+          {{select-with-bound-attribute model=model attribute='category' content=categoryNames}}
         </div>
 
         <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
-          {{select-input model=model attribute='language' content=languages optionValuePath='content' optionLabelPath='content'}}
+          {{select-with-bound-attribute model=model attribute='language' content=languages optionValuePath='content' optionLabelPath='content'}}
         </div>
 
         <button id="btn-save-link" class="btn btn-primary" {{action 'create'}}>

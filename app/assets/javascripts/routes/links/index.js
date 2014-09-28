@@ -14,16 +14,21 @@ Ch.LinksIndexRoute = Ember.Route.extend({
   renderTemplate: function () {
     this._super.apply(this, arguments);
 
+    var currentUser          = this.currentUser.get('content');
     var categoriesController = this.controllerFor('categories');
-    var linksNewController = this.controllerFor('links.new');
+    var linksNewController   = this.controllerFor('links.new');
+    var store                = this.store;
 
-    // Fecth categories only if it hasn't been already
+    // Fetch categories only if it hasn't been already
     if (Ember.isEmpty(categoriesController.get('model'))) {
-      categoriesController.set('model', this.store.find('category'));
+      categoriesController.set('model', store.find('category'));
     }
 
     if (Ember.isEmpty(linksNewController.get('model'))) {
-      linksNewController.set('model', this.store.createRecord('link'));
+      var defaultCategory = store.getById('category', 1);
+      var newLink = store.createRecord('link', {user: currentUser, category: defaultCategory});
+
+      linksNewController.set('model', newLink);
     }
 
     this.render('links-new', {

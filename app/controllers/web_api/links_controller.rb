@@ -1,7 +1,7 @@
 class WebApi::LinksController < ApplicationController
 
   def index
-    @links = Link.limit(15)
+    @links = Link.limit(15).order(created_at: :desc)
     @links = @links.where(category_id: params[:category]) if params[:category].present?
     render json: @links, each_serializer: LinkSerializer
   end
@@ -19,6 +19,6 @@ class WebApi::LinksController < ApplicationController
   private
 
   def create_params
-    params.require(:link).permit(:name, :url, :category, :language)
+    params.require(:link).permit(:name, :url, :category_id, :language, :user_id)
   end
 end

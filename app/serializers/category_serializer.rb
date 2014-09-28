@@ -4,5 +4,4 @@ class CategorySerializer < ActiveModel::Serializer
   attributes :id, :name, :color
 
   embed :ids, include: true
-  has_many :links, serializer: LinkSerializer
 end

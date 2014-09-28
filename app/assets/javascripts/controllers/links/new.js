@@ -1,24 +1,25 @@
 Ch.LinksNewController = Ember.ObjectController.extend({
   needs: 'categories',
   categories: Ember.computed.alias('controllers.categories.model'),
+  languages: ['FR', 'EN'],
+
   categoryNames: function() {
     return this.get('categories').map(function(category) {
       return {
-        id: category.get('id'),
+        id: category,
         label: category.get('name')
       };
     });
   }.property('categories.@each.name'),
-  languages: ['FR', 'EN'],
 
   actions: {
     create: function() {
-      var _this = this
+      var self = this;
 
       this.get('model').save().then(function(link){
-        // Success callback
+        self.send('refreshLinks');
       }, function() {
-          _this.set('hasErrors', true);
+        self.set('hasErrors', true);
       });
     }
   }

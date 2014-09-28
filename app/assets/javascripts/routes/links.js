@@ -1,1 +1,0 @@
-Ch.LinksRoute = Ember.Route.extend();
