@@ -1,0 +1,31 @@
+<div id="content">
+  User
+  {{currentUser.name}}
+</div>
+
+<div class="row">
+  <div class="container">
+
+  </div>
+</div>
+
+<div id="content">
+  <section id="top">
+    <div id="flash" class="container"></div>
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        {{outlet 'links-new'}}
+        {{outlet}}
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">
+        <section id="sidebar">
+          {{outlet 'sidebar-categories'}}
+          {{sidebar-participation currentUser=currentUser}}
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,0 @@
-.col-md-5
-  section#sidebar
-    #categories
-      h1 Catégories
-      ul
-        each category in model
-          li
-            = colored-label model=category
-

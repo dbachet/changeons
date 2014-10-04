@@ -1,0 +1,12 @@
+<div class="row">
+  <div id="categories">
+    <h1>Catégories</h1>
+    <ul>
+      {{#each category in model}}
+        <li>
+          {{colored-label model=category}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

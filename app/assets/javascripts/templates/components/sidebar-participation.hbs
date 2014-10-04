@@ -1,0 +1,37 @@
+<div class="row">
+  <div id="participate">
+    <h1>Participez !</h1>
+    <p class="lead">
+      Cliquez sur le bouton ci-dessous pour partager un lien (page web, URL) en rapport avec:
+      <span class="important">
+        <span class="icon">
+          <i class="icon-leaf"></i>
+        </span>
+        L'écologie
+      </span>
+      <span class="important">
+        <span class="icon">
+          <i class="icon-group"></i>
+        </span>
+        Le développement durable
+      </span>
+      <span class="important">
+        <span class="icon">
+          <i class="icon-cloud"></i>
+        </span>
+        Les énergies renouvelables
+      </span>
+      <span class="important">
+        <span class="icon">
+          <i class="icon-globe"></i>
+        </span>
+        L'environement
+      </span>
+    </p>
+    {{#if currentUser}}
+      <div class="share-link-button">
+        <button {{action 'focusOnNewLinkForm'}} class='circle'>Partager un lien</button>
+      </div>
+    {{/if}}
+  </div>
+</div>
