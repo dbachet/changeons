@@ -32,6 +32,19 @@
       <div class="share-link-button">
         <button {{action 'focusOnNewLinkForm'}} class='circle'>Partager un lien</button>
       </div>
+    {{else}}
+      <div class="share-link-button">
+        {{#link-to 'sessions.new' class='circle'}}
+          Partager un lien
+        {{/link-to}}
+      </div>
+      <p class="create-account">
+        Vous n'êtes pas encore inscrit ?
+        </br>
+        {{#link-to 'sessions.new' class='custom-link'}}
+          Créer un compte
+        {{/link-to}}
+      </p>
     {{/if}}
   </div>
 </div>
