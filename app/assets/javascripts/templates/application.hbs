@@ -5,7 +5,16 @@
 
 <div class="row">
   <div class="container">
-
+  {{#link-to 'application' (query-params category='') class='website-title'}}
+    Changeons
+  {{/link-to}}
+  {{#if currentUser.isSignedIn}}
+    <button {{action 'logout'}}>Logout</button>
+  {{else}}
+    {{#link-to 'sessions.new' class='login-link custom-link'}}
+      Se connecter
+    {{/link-to}}
+  {{/if}}
   </div>
 </div>
 
