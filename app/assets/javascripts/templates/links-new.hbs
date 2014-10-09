@@ -1,37 +1,39 @@
-<div class="col-md-12">
-  <section id="links-new">
-    <h1>
-      Ajouter un nouveau lien
-    </h1>
+{{#if currentUser}}
+  <div class="col-md-12">
+    <section id="links-new">
+      <h1>
+        Ajouter un nouveau lien
+      </h1>
 
-    <form {{action 'create' on='submit'}}>
-      <div class="row">
-        {{#if hasErrors}}
-          <div class="alert alert-danger">
-            Errors
+      <form {{action 'create' on='submit'}}>
+        <div class="row">
+          {{#if hasErrors}}
+            <div class="alert alert-danger">
+              Errors
+            </div>
+          {{/if}}
+
+          <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
+            {{input valueBinding='name' id='name' class='form-control' placeholder='Description' type='text'}}
           </div>
-        {{/if}}
 
-        <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
-          {{input valueBinding='name' id='name' class='form-control' placeholder='Description' type='text'}}
+          <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
+            {{input valueBinding='url' id='url' class='form-control' type='text' placeholder='URL'}}
+          </div>
+
+          <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
+            {{select-with-bound-attribute model=model attribute='category' content=categoryNames prompt='Sélectionner un catégorie'}}
+          </div>
+
+          <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
+            {{select-with-bound-attribute model=model attribute='language' content=languages optionValuePath='content' optionLabelPath='content'}}
+          </div>
+
+          <button id="btn-save-link" class="btn btn-primary" {{action 'create'}}>
+            Enregistrer le lien
+          </button>
         </div>
-
-        <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
-          {{input valueBinding='url' id='url' class='form-control' type='text' placeholder='URL'}}
-        </div>
-
-        <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
-          {{select-with-bound-attribute model=model attribute='category' content=categoryNames}}
-        </div>
-
-        <div class="form-group" {{bind-attr class="hasErrors:has-error"}}>
-          {{select-with-bound-attribute model=model attribute='language' content=languages optionValuePath='content' optionLabelPath='content'}}
-        </div>
-
-        <button id="btn-save-link" class="btn btn-primary" {{action 'create'}}>
-          Enregistrer le lien
-        </button>
-      </div>
-    </form>
-  </section>
-</div>
+      </form>
+    </section>
+  </div>
+{{/if}}
