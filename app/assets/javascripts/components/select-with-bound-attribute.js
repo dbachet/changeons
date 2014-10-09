@@ -2,6 +2,7 @@ Ch.SelectWithBoundAttributeComponent = Ember.Component.extend({
   optionValuePath: 'content.id',
   optionLabelPath: 'content.label',
   content: [],
+  prompt: null,
 
   defineValue: function() {
     attribute = "model.%@".fmt(this.get('attribute'));

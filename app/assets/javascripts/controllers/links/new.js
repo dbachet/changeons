@@ -10,7 +10,7 @@ Ch.LinksNewController = Ember.ObjectController.extend({
         label: category.get('name')
       };
     });
-  }.property('categories.@each.name'),
+  }.property('categories.@each'),
 
   actions: {
     create: function() {

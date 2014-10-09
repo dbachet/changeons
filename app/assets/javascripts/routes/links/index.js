@@ -25,8 +25,7 @@ Ch.LinksIndexRoute = Ember.Route.extend({
     }
 
     if (Ember.isEmpty(linksNewController.get('model'))) {
-      var defaultCategory = store.getById('category', 1);
-      var newLink = store.createRecord('link', {user: currentUser, category: defaultCategory});
+      var newLink = store.createRecord('link', {user: currentUser});
 
       linksNewController.set('model', newLink);
     }
