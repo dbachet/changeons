@@ -1,16 +1,16 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.1.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc2'
+gem 'rails', '4.1.8'
 
-gem 'devise', git: 'git://github.com/plataformatec/devise.git', branch: 'rails4'
-gem 'simple_form', git: 'https://github.com/plataformatec/simple_form.git', branch: 'v3.0.0.rc'
-gem 'cancan'
+# gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 gem 'rolify'
 gem 'rails-i18n'
-gem 'fancybox2-rails', '~> 0.2.4'
 
+gem "active_model_serializers"
+gem "rack-cors", require: "rack/cors"
+gem 'mailchimp-api', require: 'mailchimp'
 
 # Env var config
 gem 'figaro'
@@ -20,19 +20,10 @@ gem 'postageapp', git: 'git://github.com/postageapp/postageapp-ruby.git', branch
 
 # Template
 gem 'slim'
-gem 'bootstrap-sass', '2.3.1.0'
-
-# icons library
-gem 'font-awesome-rails'
-
-# Bootstrap easy to configure navbar
-gem 'rails_bootstrap_navbar'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails', git: 'https://github.com/rails/sass-rails.git', branch: 'master'
-
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', platforms: :ruby
 
@@ -58,20 +49,16 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails', '~> 2.0'
-  gem 'capybara'
+  gem 'rspec-rails', '~> 3.2.0'
   gem 'factory_girl_rails', '~> 4.0'
+  gem "vcr"
+  gem "webmock"
+end
+
+group :test, :development do
+  gem 'pry'
 end
 
 group :staging, :production do
-  # Heroku needed gems for rails 4
-  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
   gem 'pg', '0.14.1'
 end
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use debugger
-# gem 'debugger'

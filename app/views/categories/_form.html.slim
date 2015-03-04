@@ -1,8 +1,0 @@
-= simple_form_for(@category, html: {class: 'form-horizontal'}) do |f|
-  legend= t('.title')
-  = f.error_notification
-  = f.input :name, input_html: {class: 'input-xxlarge'}
-  = f.input :color, input_html: {class: 'input-small'}
-  .form-actions
-    = f.button :submit, t('.submit'), class: 'btn-primary'
-    span style="margin-left: 10px" = link_to t('.back'), categories_path, class: 'btn btn-danger'
