@@ -3,7 +3,13 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
-require 'capybara/rspec'
+require 'vcr'
+
+VCR.configure do |c|
+  c.cassette_library_dir     = 'spec/cassettes'
+  c.stub_with                :webmock
+  c.default_cassette_options = { :record => :new_episodes }
+end
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -14,6 +20,9 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
+  # It enables to automatically add metadata to specs based on their location on the filesystem
+  config.infer_spec_type_from_file_location!
+
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -22,8 +31,7 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
 
-  # Add devise helpers
-  config.include Features::SessionHelpers, type: :feature
+  config.extend VCR::RSpec::Macros
 
   # No need to use FactoryGirl class to call methods
   config.include FactoryGirl::Syntax::Methods

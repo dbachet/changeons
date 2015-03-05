@@ -2,11 +2,8 @@ class User < ActiveRecord::Base
   rolify
   has_many :links
 
-  # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+  # devise :database_authenticatable, :registerable,
+         # :recoverable, :rememberable, :trackable, :validatable
   before_save :add_default_role, if: 'role_ids.empty?'
 
   ROLES = %w(member admin)

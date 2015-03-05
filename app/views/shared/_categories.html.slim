@@ -1,9 +1,0 @@
-#categories
-  h1= 'Catégories'
-  ul
-    - @categories.each do |category|
-      li
-        .label.category style="background-color: #{category.color}"
-          = link_to category.name, show_category_path(category)
-          - if @category && @category == category
-            = link_to("<i class='icon-remove'></i>".html_safe, root_path)
