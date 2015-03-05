@@ -1,8 +1,8 @@
-class Users::RegistrationsController < Devise::RegistrationsController
+# class Users::RegistrationsController < Devise::RegistrationsController
 
-  def create
-    super
-    UserMailer.welcome(@user).deliver
-  end
+#   def create
+#     super
+#     UserMailer.welcome(@user).deliver
+#   end
 
-end
+# end
