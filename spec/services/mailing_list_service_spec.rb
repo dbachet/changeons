@@ -34,10 +34,10 @@ describe MailingListService do
     context "when email is already subscribed to the list" do
       use_vcr_cassette
 
-      let(:email) { "dbachet@gmail.com" }
+      let(:email) { "already_subscribed@changeons.org" }
 
       specify do
-        expect( subject.subscribe ).to eql false
+        expect( subject.subscribe ).to eql :already_subscribed_to_list
       end
     end
   end

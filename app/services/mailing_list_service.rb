@@ -14,7 +14,7 @@ class MailingListService
         provider.lists.subscribe(list_id, { "email" => email })
       end
     rescue Mailchimp::ListAlreadySubscribedError
-      false
+      :already_subscribed_to_list
     end
   end
 
