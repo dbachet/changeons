@@ -30,5 +30,15 @@ describe MailingListService do
     specify do
       expect( subject.subscribe ).to eql subscribe_return
     end
+
+    context "when email is already subscribed to the list" do
+      use_vcr_cassette
+
+      let(:email) { "dbachet@gmail.com" }
+
+      specify do
+        expect( subject.subscribe ).to eql false
+      end
+    end
   end
 end

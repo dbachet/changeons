@@ -9,8 +9,12 @@ class MailingListService
   end
 
   def subscribe
-    if %w(production test).include?(Rails.env)
-      provider.lists.subscribe(list_id, { "email" => email })
+    begin
+      if %w(production test).include?(Rails.env)
+        provider.lists.subscribe(list_id, { "email" => email })
+      end
+    rescue Mailchimp::ListAlreadySubscribedError
+      false
     end
   end
 
