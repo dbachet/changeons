@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://us9.api.mailchimp.com/2.0/lists/subscribe.json
+    body:
+      encoding: UTF-8
+      string: '{"id":"559125b239","email":{"email":"already_subscribed@changeons.org"},"merge_vars":null,"email_type":"html","double_optin":true,"update_existing":false,"replace_interests":true,"send_welcome":false,"apikey":"7e9dcc3d6d04b207544cc26a55b157b6-us9"}'
+    headers:
+      User-Agent:
+      - excon/0.41.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 500
+      message: ''
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '124'
+      X-Mailchimp-Api-Error-Code:
+      - '214'
+      Date:
+      - Wed, 11 Mar 2015 17:44:46 GMT
+      Connection:
+      - close
+      Set-Cookie:
+      - _AVESTA_ENVIRONMENT=prod; path=/
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","code":214,"name":"List_AlreadySubscribed","error":"already_subscribed@changeons.org
+        is already subscribed to the list."}'
+    http_version:
+  recorded_at: Wed, 11 Mar 2015 17:44:46 GMT
+recorded_with: VCR 2.9.3
