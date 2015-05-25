@@ -3,6 +3,8 @@ module Api
     class LinksController < ApplicationController
 
       def index
+
+        page = (params[:page] || 1).to_i
         links = Link.all
         category = Category.where(name: params[:category]).first
 
@@ -10,8 +12,9 @@ module Api
           links = links.where(category: category)
         end
 
-        # binding.pry
-        render json: links, each_serializer: LinkSerializer
+        links = links.page(page).per(10)
+
+        render json: links, each_serializer: LinkSerializer, meta: {total_pages: links.total_pages}
       end
     end
   end
