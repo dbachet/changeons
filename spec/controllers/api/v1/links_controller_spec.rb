@@ -36,7 +36,6 @@ describe Api::V1::LinksController do
 
       specify do
         subject
-        binding.pry
         expect(json_response[:links].count).to eql 1
         expect(json_response[:links]).to eql links_result
       end
