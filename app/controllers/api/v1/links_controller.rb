@@ -12,7 +12,7 @@ module Api
           links = links.where(category: category)
         end
 
-        links = links.page(page).per(10)
+        links = links.page(page).per(25)
 
         render json: links, each_serializer: LinkSerializer, meta: {total_pages: links.total_pages}
       end
