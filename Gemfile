@@ -11,15 +11,13 @@ gem 'rails-i18n'
 gem "active_model_serializers"
 gem "rack-cors", require: "rack/cors"
 gem 'mailchimp-api', require: 'mailchimp'
+gem 'kaminari'
 
 # Env var config
 gem 'figaro'
 
 # Email service
 gem 'postageapp', git: 'git://github.com/postageapp/postageapp-ruby.git', branch: 'rails4'
-
-# Template
-gem 'slim'
 
 # Gems used only for assets and not required
 # in production environments by default.
