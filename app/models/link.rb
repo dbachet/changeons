@@ -1,7 +1,8 @@
-class Link < ActiveRecord::Base
+class Link < Share
   belongs_to :category
 
   belongs_to :user
+
   LANGUAGES = ['FR', 'EN']
   validates :name, uniqueness: true, presence: true
   validates :url, uniqueness: true, presence: true

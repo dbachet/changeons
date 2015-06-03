@@ -68,7 +68,7 @@ describe 'Link' do
 
   describe '#disqus_uniq_identifier' do
     let(:link) { create :link }
-    it { link.disqus_uniq_identifier.should eql 'test_LINK_1' }
+    it { link.disqus_uniq_identifier.should eql "test_LINK_#{link.id}" }
   end
 
   describe '#disqus_category_id' do
