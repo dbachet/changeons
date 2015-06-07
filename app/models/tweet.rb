@@ -1,3 +1,2 @@
-class Tweet < ActiveRecord::Base
-
+class Tweet < Share
 end

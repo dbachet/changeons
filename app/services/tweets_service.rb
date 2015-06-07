@@ -14,7 +14,10 @@ class TweetsService
 
   def tweets_attributes_array
     tweets.map do |tweet|
-      { remote_id: tweet.id }
+      {
+        remote_id: tweet.id,
+        created_at: tweet.created_at
+      }
     end
   end
 end
