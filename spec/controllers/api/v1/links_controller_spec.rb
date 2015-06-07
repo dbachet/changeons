@@ -19,13 +19,15 @@ describe Api::V1::LinksController do
         [
           {
             id: link_1.id,
+            type: "Link",
             name: link_1.name,
             url: link_1.url,
             created_at: link_1.created_at.to_json.tr('"', ''),
             language: link_1.language,
             category: link_1.category.name,
             category_color: link_1.category.color,
-            user: link_1.user.name
+            user: link_1.user.name,
+            remote_id: nil
           }
         ]
       end

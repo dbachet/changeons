@@ -15,4 +15,24 @@ describe TwitterApi::Fetch do
     end
   end
 
+  describe "#tweets_and_retweets_since" do
+    let(:id) { 1 }
+
+    specify do
+      expect(
+        subject.tweets_and_retweets(since_id: id, count: 200).count
+      ).to eql 111
+      # 111 is the number of tweets and retweets available on the account at
+      # the moment we recorded the cassette
+    end
+
+    specify do
+      expect(
+        subject.tweets_and_retweets(count: 200).count
+      ).to eql 111
+      # 111 is the number of tweets and retweets available on the account at
+      # the moment we recorded the cassette
+    end
+  end
+
 end
