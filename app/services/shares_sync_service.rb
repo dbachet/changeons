@@ -8,7 +8,7 @@
 #
 # Examples
 #
-#   SharesSyncService.new(2134).perform
+#   SharesSyncService.new(since_id: 2134).perform
 #   # => nil
 #
 class SharesSyncService
