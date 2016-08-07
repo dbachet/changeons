@@ -4,7 +4,7 @@ ruby "2.1.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 
-# gem 'devise', git: 'git://github.com/plataformatec/devise.git'
+ gem 'devise'
 gem 'rolify'
 gem 'rails-i18n'
 

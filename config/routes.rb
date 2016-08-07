@@ -1,4 +1,5 @@
 Changeons::Application.routes.draw do
+  devise_for :users
   namespace :api do
     namespace :v1 do
       resources :mailing_list_recipients, only: [:create]
@@ -7,5 +8,6 @@ Changeons::Application.routes.draw do
     end
   end
 
+  root to: "links#index"
   # devise_for :users, controllers: { registrations: 'users/registrations' }
 end

@@ -6,12 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-(User::ROLES).each do |name|
-  Role.create!(name: name) unless Role.where(name: name).exists?
-end
-
-user = User.find_by(email: ENV['ADMIN_EMAIL'])
-user = User.new(email: ENV['ADMIN_EMAIL'].dup, password: ENV['ADMIN_PWD'].dup, name: ENV['ADMIN_NAME'].dup) unless user
-user.add_role(User::ROLES.last)
-user.save
+User.create_with(email: 'test@test.com', password: 'testtest').where(email: 'test@test.com').first_or_create!.confirm
 
