@@ -1,6 +1,18 @@
 module Api
   module V1
     class SharesController < ApplicationController
+      before_action :authenticate_user!, only: [:create]
+      respond_to :json
+
+      def create
+        @share = Link.create!(
+          name: create_params[:name],
+          url: create_params[:url],
+          user: User.first,
+          category: Category.find_by_name(create_params[:category]),
+          language: create_params[:language])
+        render json: @share
+      end
 
       def index
         set_page
@@ -15,6 +27,13 @@ module Api
       end
 
       private
+
+      def create_params
+        params
+          .require(:data)
+          .require(:attributes)
+          .permit(:name, :url, :language, :category)
+      end
 
       def set_page
         @page ||= (params[:page] || 1).to_i

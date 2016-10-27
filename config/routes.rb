@@ -4,7 +4,7 @@ Changeons::Application.routes.draw do
     namespace :v1 do
       resources :mailing_list_recipients, only: [:create]
       resources :links, only: [:index]
-      resources :shares, only: [:index]
+      resources :shares, only: [:index, :create]
       resources :users, controllers: { sessions: 'sessions' }
     end
   end

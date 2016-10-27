@@ -31,6 +31,8 @@ RSpec.configure do |config|
     end
   end
 
+  config.include Devise::TestHelpers, type: :controller
+
   # It enables to automatically add metadata to specs based on their location on the filesystem
   config.infer_spec_type_from_file_location!
 
