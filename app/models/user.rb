@@ -3,26 +3,22 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  # rolify
   has_many :links
 
-  # devise :database_authenticatable, :registerable,
-         # :recoverable, :rememberable, :trackable, :validatable
-  # before_save :add_default_role, if: 'role_ids.empty?'
+  before_save :ensure_authentication_token
 
-  # ROLES = %w(member admin)
+  def ensure_authentication_token
+    if authentication_token.blank?
+      self.authentication_token = generate_authentication_token
+    end
+  end
 
-  # def admin?
-  #   @admin ||= has_role?(:admin)
-  # end
+  private
 
-  # def member?
-  #   @member ||= has_role?(:member)
-  # end
-
-  # private
-
-  #   def add_default_role
-  #     add_role(ROLES.first)
-  #   end
+  def generate_authentication_token
+    loop do
+      token = Devise.friendly_token
+      break token unless User.where(authentication_token: token).exists?
+    end
+  end
 end

@@ -8,6 +8,7 @@ default: &default
 development:
   <<: *default
   database: changeons-dev
+  host: 127.0.0.1
 
 test:
   <<: *default

@@ -8,7 +8,7 @@ gem 'rails', '4.1.8'
 gem 'rolify'
 gem 'rails-i18n'
 
-gem "active_model_serializers"
+gem "active_model_serializers", "0.10.2"
 gem "rack-cors", require: "rack/cors"
 gem 'mailchimp-api', require: 'mailchimp'
 gem 'kaminari'

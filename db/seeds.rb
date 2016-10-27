@@ -6,5 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create_with(email: 'test@test.com', password: 'testtest').where(email: 'test@test.com').first_or_create!.confirm
+user     = User.create_with(email: 'test@test.com', password: 'testtest').where(email: 'test@test.com').first_or_create!
+category = Category.where(name: "Alimentation").first_or_create!
+
+tweet = Tweet.where(remote_id: "697572954855624705").first_or_create!
+link = Link.where(
+  name: "Contre le gaspillage alimentaire, l'appli qui géolocalise les invendus.",
+  url: "http://www.optimiam.com/",
+  language: "FR",
+  category: category,
+  user: user
+).first_or_create!
 
