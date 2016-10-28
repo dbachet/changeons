@@ -5,7 +5,7 @@ Changeons::Application.routes.draw do
       resources :mailing_list_recipients, only: [:create]
       resources :links, only: [:index]
       resources :shares, only: [:index, :create]
-      resources :users, controllers: { sessions: 'sessions' }
+      resources :users, only: [:show]
     end
   end
 
