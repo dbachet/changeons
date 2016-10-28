@@ -11,7 +11,7 @@ module Api
           user: User.first,
           category: Category.find_by_name(create_params[:category]),
           language: create_params[:language])
-        render json: @share
+        render json: @share, serializer: ShareSerializer
       end
 
       def index

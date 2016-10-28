@@ -1,7 +1,7 @@
 module Api
   module V1
     class ShareSerializer < ActiveModel::Serializer
-      attributes :id, :type, :name, :url, :created_at, :language, :category, :category_color, :user, :remoteId
+      attributes :id, :type, :name, :url, :created_at, :language, :category, :category_color, :user, :remote_id
 
       def category
         object.category.name if object.type == "Link"
@@ -19,7 +19,7 @@ module Api
         object.user.name if object.type == "Link"
       end
 
-      def remoteId
+      def remote_id
         object.remote_id.to_s if object.type == "Tweet"
       end
     end
