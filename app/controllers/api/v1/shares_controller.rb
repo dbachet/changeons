@@ -5,13 +5,18 @@ module Api
       respond_to :json
 
       def create
-        @share = Link.create!(
+        @share = Link.new(
           name: create_params[:name],
           url: create_params[:url],
-          user: User.first,
+          user: current_user,
           category: Category.find_by_name(create_params[:category]),
           language: create_params[:language])
-        render json: @share, serializer: ShareSerializer
+
+        if @share.save
+          render json: @share, serializer: ShareSerializer
+        else
+          render json: @share, status: :unprocessable_entity, serializer: ActiveModel::Serializer::ErrorSerializer
+        end
       end
 
       def index

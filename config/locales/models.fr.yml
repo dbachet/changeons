@@ -1,0 +1,11 @@
+fr:
+  activerecord:
+    errors:
+      models:
+        link:
+          attributes:
+            url:
+              invalid_url_format: >
+                L'url que vous avez saisi est invalide. Veuillez vérifier
+                qu'elle commence par "https://" ou "http://". Exemple:
+                "https://mon-site.com"
